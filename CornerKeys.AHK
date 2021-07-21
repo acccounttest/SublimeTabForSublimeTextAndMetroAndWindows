@@ -28,7 +28,7 @@ Send {Control up}
 Send {Tab up}
 Send {Alt up}
 MouseMove, 494,454,0
-KeyWait, LButton, D²
+KeyWait, LButton, D
 Sleep,150
 GetKeyState, state, Control
 if (state = "D"){
