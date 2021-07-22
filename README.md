@@ -153,7 +153,7 @@ What this old app does:
 
 Easy Window Switcher , wincycle.exe, Located in \%AppData%\Local\NeoSmart Technologies\wincycle\
 
-This other application can do a similar approach, but i needed rewrite the shortcut to make it works cause the key for my country is not convertible with modifiers as it use already one modifier key, example ```ctrl+` ´´´ and ´´´ ` ``` need 2 modifiers or 1, this last application permit to cycle the same windows of
+This other application can do a similar approach, but i needed rewrite the shortcut to make it works cause the key for my country is not convertible with modifiers as it use already one modifier key, example ``` ctrl+` and ` ``` need 2 modifiers or 1, this last application permit to cycle the same windows of
 the same application, notepad compatible, 0 config, it should change in main european main countries, but maybe you can find it for you,
  for belgium it is ``` ` ``` backtick but it is well triggered by their application, faster than a uncompiled .ahk file, really fast and usefully accessible,
  the ideal is forward it to this: 
