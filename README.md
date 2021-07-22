@@ -51,7 +51,7 @@ any automation scripts.
 -------------------------------------------------------------------------
 In games it coud be necessary to deactive script temporaly, or pause shortcuts by same right clic on icon in notification area, kill it or blacklist the application, accessible in all proper ways to do it, presented in the simplest form in this script, by using the title of the windows, it's rarely needed to aim the window more specifically, don't forget eventually in a more complex matching window attribute, use the regex options each times you did, example with SetTitleMatchMode, it apply until it is reapplied, it is not used in this script, if you want not exclude applications from this for the moment, just comment out the line starting by #If and the line #If, with the commentary sign ; first. 
 
-`
+```
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #SingleInstance force
 ;#UseHook Off;
@@ -60,7 +60,7 @@ In games it coud be necessary to deactive script temporaly, or pause shortcuts b
 ;SHORTCUTS https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 CoordMode, Mouse, Screen
-`
+```
 
 Or headers made by default with the right click new file then autohotkey, not recommanded:
 `
