@@ -19,6 +19,8 @@
 
 ##FREE KEYS
 
+##VERSION 1 NOW VERSION2
+
 ##IDEA
 --------
 Main idea is replace the tab of the keyboard with shift lock, i prefer and is nearer the others keys but much more used.
@@ -270,3 +272,29 @@ Add handle key `²` 2 seconds is another functionnality as others keys can works
 The idea is keep remain a list of tab that were previously added in a list of always on top application, in the usual way the list is dynamic, so we could achieve an operation on that list of window, minimize them, remove the on top option to reactive it later on all same windows, but the same with all others windows until there are at least 2 windows in that list, the way to achieve it can look more similar without knowledge, you could do just a list of working application or reuse sometrhing less reliable that will detect any windows, in a loop or with more conditionnals instructions.
 
 
+
+##VERSION 1 NOW VERSION2
+------------------------
+After the use of the escape key after a `double tab`, the double same key is broken, change the window or type something, it works only when the script does it when we want to close the banner with the `right click` by sending a emulated escape key.
+Change the size of metro thumbnails, see my Windows theme project, about metro thumbnails in `alt+tab`.
+Important, for the MouseMove, change your thumbnails configuration with WinAeroTweaker, alt+tab section:
+-1.Thumbnails size 300
+-1. Horizontal spacing 10
+-1. Vertical spacing 10
+-1. Left and right margins 20
+-1. Top margin 15
+-1. Bottom margin 10
+
+
+Personally i prefer use the number 1, no need to choose between them without knowledge of the title, a list is more appropriate, idk if the setting is reloadable on the fly and apply without need to reconnect the user, i don't have multi resolutions, i don't doubt AHK could control the banner of Metro, it could even split the squares if they start to go outside the screen, for me it was yet the case with not much windows but hopefully it's not too much disturbing, just the configuration allow me to have mouse positioned between the most 4 last used application, i have to move a pixel or two to choose the application.
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband\NumThumbnails 1 to 16 for 1080 HD
+
+The diode of the caps lock has been made to not stay in unfair status with unfair operation number, normally it should show the light but reverse its status, so when always on it stay always on, same for off, my preference, should works really better with caps lock diode off, if it come back on, then try `ctrl+shift lock` or `alt+shift lock`, 2 times should be enough in the worst cases.
+
+If a problem occurs with the double tab then deactivate it, the normal `alt+tab` can works but as usual and original way, if you want same behaviour, add the section about waiting the `left mouse click` then reuse the steps, just after MouseMove, between lines, KeyWait AND AlwaysOnTop, ON, or, between lines, count:=0 AND #If, respectively for version 1 and version 2; or continue to send the virtualized keys, by default, ² half a second, for set last selected window into always on top mode.
+
+If you want send a combined keys including `tab` then use the original key tab, ex: `ctrl+tab` or `alt+tab`, note: notepad can bring back to the front just by using `ctrl+alt` keys `down` or not when the window in under the user focus but below a stack of windows, it's normal, this program is exceptional with AHK, don't use it for AHK developments and tests.
+
+This version add possibility to cancel the permanent `alt+tab` by sending escape when the user make a `right click` on it, don't use escape, usually when user send escape it break the same double tab and it need much time and operations to return to the normal detection, otherwise you can simply `click` outside the metro banner but with the `right click`.
+
+This version need to be explicitly compatible with certain applications , steam.exe, but compatible with much more others for bring to front, ex: consoles, it does not override the window application preference, always on top, exemple with steam.exe, without add it in exception list, it stack the captures of tabs like right click so when user want use the right click, it is appearing and disappearing immediately, so the number of false tab into false right click need to be inferiors, the number of real right click need to be equal or superior to remove the bug and allow the drop down menu to stay visible and not close directly, it's very rare.
