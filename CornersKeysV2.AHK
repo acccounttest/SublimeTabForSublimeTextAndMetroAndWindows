@@ -13,7 +13,7 @@ CapsLock::
 Send {tab 1}
 Return
 
-#If (!WinActive("Counter-Strike Source")) and (!WinActive("Example") and !WinActive("Sample"))
+#If (!WinActive("Counter-Strike Source")) and !WinActive("ahk_exe steam.exe"))
 $tab::
 GetKeyState, state, Shift
 if (state = "D"){
