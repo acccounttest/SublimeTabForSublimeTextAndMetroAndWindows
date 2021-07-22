@@ -70,8 +70,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 `
 
-##Whole script convertible or modifiable
-
+Whole script convertible or modifiable
 `
 CapsLock::
 Send {tab 1}
@@ -96,8 +95,8 @@ KeyWait, LButton, D
 Sleep,150
 GetKeyState, state, Control
 if (state = "D"){
-    WinGet, active_id, ID, A
-    WinSet, AlwaysOnTop, ON, ahk_id %active_id%
+WinGet, active_id, ID, A
+WinSet, AlwaysOnTop, ON, ahk_id %active_id%
 }
 }
 Return
