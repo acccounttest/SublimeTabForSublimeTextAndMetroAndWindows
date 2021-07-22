@@ -48,7 +48,7 @@ any automation scripts.
 
 
 ##Headers part or right clic new folder and new file and click Autohotkey
-
+-------------------------------------------------------------------------
 In games it coud be necessary to deactive script temporaly, or pause shortcuts by same right clic on icon in notification area, kill it or blacklist the application, accessible in all proper ways to do it, presented in the simplest form in this script, by using the title of the windows, it's rarely needed to aim the window more specifically, don't forget eventually in a more complex matching window attribute, use the regex options each times you did, example with SetTitleMatchMode, it apply until it is reapplied, it is not used in this script, if you want not exclude applications from this for the moment, just comment out the line starting by #If and the line #If, with the commentary sign ; first. 
 
 `
@@ -141,20 +141,20 @@ I use Sublime text version 3200, if you experience problem to send a normal tab 
 ##Third idea: rebind another same application
 
 What i do:
--Send window under all others windows, release the key ² very fast.
--Send the window to the front, always on top, press less 0.5 second same key.
--Supress simply the always on top of the application, the others on top should appears automatically and immediatly, combine alt and ².
--Invert groups, soon.
--Select windows by thumbnails the fastest possible, double press the original tab key.
--etc
+1.Send window under all others windows, release the key ² very fast.
+1.Send the window to the front, always on top, press less 0.5 second same key.
+1.Supress simply the always on top of the application, the others on top should appears automatically and immediatly, combine alt and ².
+1.Invert groups, soon.
+1.Select windows by thumbnails the fastest possible, double press the original tab key.
+1.etc
 
 What this old app does:
--Cycle though identical windows.
--This app add temporal groups.
+1.Cycle though identical windows.
+1.This app add temporal groups.
 
 Easy Window Switcher , wincycle.exe, Located in \%AppData%\Local\NeoSmart Technologies\wincycle\
 
-This other application can do a similar approach, but i needed rewrite the shortcut to make it works cause the key for my country is not convertible with modifiers as it use already one modifier key, example `ctrl+`` and `´` need 2 modifiers or 1, this last application permit to cycle the same windows of
+This other application can do a similar approach, but i needed rewrite the shortcut to make it works cause the key for my country is not convertible with modifiers as it use already one modifier key, example ctrl+` and ` need 2 modifiers or 1, this last application permit to cycle the same windows of
 the same application, notepad compatible, 0 config, it should change in main european main countries, but maybe you can find it for you,
  for belgium it is ` backtick but it is well triggered by their application, faster than a uncompiled .ahk file, really fast and usefully accessible,
  the ideal is forward it to this: 
