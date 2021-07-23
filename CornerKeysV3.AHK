@@ -20,6 +20,12 @@ Return
 KeyWait,Control,D,T3
     If (ErrorLevel != 1)
     {
+    ;Send, {LButton 1}
+    ;Sleep,150
+    ;Send, {Control up}
+    ;SetMouseDelay, 0
+    DllCall("mouse_event", "UInt", 0x02)
+    DllCall("mouse_event", "UInt", 0x04)
     Sleep,100
     WinGet, active_id, ID, A
     WinShow, ahk_id %active_id%
