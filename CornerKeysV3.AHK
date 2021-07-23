@@ -14,25 +14,18 @@ Send {tab 1}
 Return
 
 ~Alt & ~Tab::
-while !(GetKeyState("LButton", "P")) or $!(GetKeyState("RButton", "P"))
+KeyWait,Control,D
+Sleep,100
+WinGet, active_id, ID, A
+WinShow, ahk_id %active_id%
+WinActivate, ahk_id %active_id%
+WinSet, AlwaysOnTop, ON, ahk_id %active_id%
+Sleep,100
+Sleep,100
+GetKeyState, state, RButton
+if (state = "D")
 {
-    Sleep,100
-    GetKeyState, state, RButton
-    if (state = "D")
-    {
-    Send,{Esc}
-    }
-    GetKeyState, state, Control
-    if (state = "D"){
-        Sleep,100
-        WinGet, active_id, ID, A
-        WinShow, ahk_id %active_id%
-        WinActivate, ahk_id %active_id%
-        WinSet, AlwaysOnTop, ON, ahk_id %active_id%
-        Sleep,100
-        ;Send,{~RButton}
-        ;Hotkey, RButton{Down}, Toggle²
-    }
+Send,{Esc}
 }
 return
 
@@ -52,43 +45,20 @@ Send {Tab up}
 Send {Alt up}
 MouseMove, 494,454,0
 
-count:=0
-while !(GetKeyState("LButton", "P")) or $!(GetKeyState("RButton", "P"))
+GetKeyState, state, RButton
+if (state = "D")
 {
-    Sleep,100
-    count:=100
-    GetKeyState, state, RButton
-    if (state = "D")
-    {
-    Send,{Esc}
-    ;Break
-    }
-    GetKeyState, state, Control
-    if (state = "D"){
-        Send, {LButton down}
-        Send, {LButton up}
-        Sleep,100
-        WinGet, active_id, ID, A
-        WinShow, ahk_id %active_id%
-        WinActivate, ahk_id %active_id%
-        WinSet, AlwaysOnTop, ON, ahk_id %active_id%
-        Sleep,100
-        continue
-        ;Send,{~RButton}
-        ;Hotkey, RButton{Down}, Toggle²
-    }
-    else{
-        ;Send,{Control down}
-        ;Sleep,10
-        ;Send,{Control up}
-    }
-    if (count>=1000)
-    {
-        Reload
-    }
-    ;Sleep,100
+Send,{Esc}
 }
-
+Keywait,Control,D
+    Send, {LButton down}
+    Send, {LButton up}
+    Sleep,100
+    WinGet, active_id, ID, A
+    WinShow, ahk_id %active_id%
+    WinActivate, ahk_id %active_id%
+    WinSet, AlwaysOnTop, ON, ahk_id %active_id%
+    Sleep,100
 }
 Return
 #If
