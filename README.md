@@ -150,16 +150,16 @@ I use Sublime text version 3200, if you experience problem to send a normal tab 
 ##Third idea: rebind another same application
 
 What i do:
-1.Send window under all others windows, release the key ² very fast.
-1.Send the window to the front, always on top, press less 0.5 second same key.
-1.Supress simply the always on top of the application, the others on top should appears automatically and immediatly, combine alt and ².
-1.Invert groups, soon.
-1.Select windows by thumbnails the fastest possible, double press the original tab key.
-1.etc
+-Send window under all others windows, release the key ² very fast.
+-Send the window to the front, always on top, press less 0.5 second same key.
+-Supress simply the always on top of the application, the others on top should appears automatically and immediatly, combine alt and ².
+-Invert groups, soon.
+-Select windows by thumbnails the fastest possible, double press the original tab key.
+-etc
 
 What this old app does:
-1.Cycle though identical windows.
-1.This app add temporal groups.
+-Cycle though identical windows.
+-This app add temporal groups.
 
 Easy Window Switcher , wincycle.exe, Located in \%AppData%\Local\NeoSmart Technologies\wincycle\
 
@@ -287,12 +287,12 @@ The idea is keep remain a list of tab that were previously added in a list of al
 After the use of the escape key after a `double tab`, the double same key is broken, change the window or type something, it works only when the script does it when we want to close the banner with the `right click` by sending a emulated escape key.
 Change the size of metro thumbnails, see my Windows theme project, about metro thumbnails in `alt+tab`.
 Important, for the MouseMove, change your thumbnails configuration with WinAeroTweaker, alt+tab section:
--1.Thumbnails size 300
--1. Horizontal spacing 10
--1. Vertical spacing 10
--1. Left and right margins 20
--1. Top margin 15
--1. Bottom margin 10
+-Thumbnails size 300
+-Horizontal spacing 10
+-Vertical spacing 10
+-Left and right margins 20
+-Top margin 15
+-Bottom margin 10
 
 
 Personally i prefer use the number 1, no need to choose between them without knowledge of the title, a list is more appropriate, idk if the setting is reloadable on the fly and apply without need to reconnect the user, i don't have multi resolutions, i don't doubt AHK could control the banner of Metro, it could even split the squares if they start to go outside the screen, for me it was yet the case with not much windows but hopefully it's not too much disturbing, just the configuration allow me to have mouse positioned between the most 4 last used application, i have to move a pixel or two to choose the application.
