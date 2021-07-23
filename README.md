@@ -150,12 +150,12 @@ I use Sublime text version 3200, if you experience problem to send a normal tab 
 ##Third idea: rebind another same application
 
 What i do:
--Send window under all others windows, release the key ² very fast.
--Send the window to the front, always on top, press less 0.5 second same key.
--Supress simply the always on top of the application, the others on top should appears automatically and immediatly, combine alt and ².
--Invert groups, soon.
--Select windows by thumbnails the fastest possible, double press the original tab key.
--etc
+- Send window under all others windows, release the key ² very fast.
+- Send the window to the front, always on top, press less 0.5 second same key.
+- Supress simply the always on top of the application, the others on top should appears automatically and immediatly, combine alt and ².
+- Invert groups, soon.
+- Select windows by thumbnails the fastest possible, double press the original tab key.
+- etc
 
 What this old app does:
 -Cycle though identical windows.
