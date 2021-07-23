@@ -1,3 +1,6 @@
+```
+Warning since recent updates, something wrong has been revealed, it seems you need 2 AHK script for this to works, i didn't had this issue, normally it's not required, but with this script, the double tab will not works, just get another file.AHK run while one only version at same time of theses, even with no code related(but the AHK need stay alive and not close immediately too, there must be code lines in it under the header part, just get sure you have at least 2 .AHK file started, if you don't know what start, choose something you want bind or rebind or simply cut the code of a script into two, but i am not sure it is really good, now see V3 to know all.
+```
 # Window manager with modifiers or equikeys in corners and SublimeTab for sublimeText , general use and metro alt+tab (For different european keyboards and shortcuts and whole world with tab and shift lock, keys)
 
 
@@ -20,6 +23,8 @@
 ##FREE KEYS
 
 ##VERSION 1 NOW VERSION2
+
+##VERSION 3
 
 ##IDEA
 --------
@@ -297,3 +302,32 @@ If you want send a combined keys including `tab` then use the original key tab, 
 This version add possibility to cancel the permanent `alt+tab` by sending escape when the user make a `right click` on it, don't use escape, usually when user send escape it break the same double tab and it need much time and operations to return to the normal detection, otherwise you can simply `click` outside the metro banner but with the `right click`.
 
 This version need to be explicitly compatible with certain applications , steam.exe, but compatible with much more others for bring to front, ex: consoles, it does not override the window application preference, always on top, exemple with steam.exe, without add it in exception list, it stack the captures of tabs like right click so when user want use the right click, it is appearing and disappearing immediately, so the number of false tab into false right click need to be inferiors, the number of real right click need to be equal or superior to remove the bug and allow the drop down menu to stay visible and not close directly, it's very rare.
+
+
+
+##This version 3 adds more content.
+-----------------------------------
+As the new version 3 can break the double tap functionality, `alt+tab` refuse works as normally, here it can be with the problem of the same behavior when alt is pressed , the banner stay without need to keep keys pressed but like it can be handled multiple times in a row, the functionality can be better as never, apps are not blocked if the system break the `alt+tab`.
+
+This version seems more adapted for a certain compatibility between applications related to the always on top, or not, but too certain window types that are normally recensed, otherwise the console type windows and particularly when we desire switch each together, the difference was not noticeable, maybe the windows was never been always on top by default by the app code firstly.
+
+This version is not well accomplished as the user need to get the `mouse up` button event before the next `control up`, else the application could not appear as well as normal mode, when the user press `alt down+tab` or `double tab`, and when the application is against other in the always on top mode, the application can stay under or incompatible, specially others with others.
+To cancel the banner, you need to do a long `click`, i don't remember at least 100 ms should be enough, if you have an old computer maybe try to change the script to 150ms or remove the second.
+
+
+Since i added a compatible part of the code only for same functionality as proposed to replace the original `alt+tab`(and the LButton{down} and LButton{up}, the script add the same continuity to the original `alt+tab` while holding alt down, but there is another difference, the always on top works in two ways now:
+1.After double tab, just select your window you want with always on top just by click `control down` and immediately, not even need the mouse.
+1.In the original `alt+tab`, you have to keep the `control` key while the `left click is down`, and more, you need to release the `left click` before the `control` key, else it will work but only for non always on top applications.
+
+Warning, maybe this is not a good version for applications with multi windows, they could tend to not pop in front, even all in always on top, normally the last should always be the last, but maybe on chrome, this application can handle multiple windows with same focus at same time.
+
+The groups are not yet functionals, and idk if i will need them, at the start this was not intended to be as far as programming is not, the code with minimal modifications can react completely differently and break one or more functionalities without any explanations, this script will probably need a conversion for other OS platforms.
+
+The code below as not used; no significant impact or do nothing:
+```
+;GetKeyState, state, CapsLock
+;SetCapsLockState, alwaysoff
+;AltTab
+;ShiftAltTab
+```
+
