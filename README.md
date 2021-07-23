@@ -1,5 +1,10 @@
 ```
-Warning since recent updates, something wrong has been revealed, it seems you need 2 AHK script for this to works, i didn't had this issue, normally it's not required, but with this script, the double tab will not works, just get another file.AHK run while one only version at same time of theses, even with no code related(but the AHK need stay alive and not close immediately too, there must be code lines in it under the header part, just get sure you have at least 2 .AHK file started, if you don't know what start, choose something you want bind or rebind or simply cut the code of a script into two, but i am not sure it is really good, now see V3 to know all.
+Warning since recent updates, something wrong has been revealed, it seems you need 2 AHK scripts for this to works,
+i didn't had this issue, normally it's not required, but with this script, the double tab will not works, just get 
+another file.AHK run while one only version at same time of theses, even with no code related(but the AHK need stay
+alive and not close immediately too, there must be code lines in it under the header part, just get sure you have at
+least 2 .AHK file started, if you don't know what start, choose something you want bind or rebind or simply cut the
+code of a script into two, but i am not sure it is really good, now see V3 to know all.
 ```
 # Window manager with modifiers or equikeys in corners and SublimeTab for sublimeText , general use and metro alt+tab (For different european keyboards and shortcuts and whole world with tab and shift lock, keys)
 
