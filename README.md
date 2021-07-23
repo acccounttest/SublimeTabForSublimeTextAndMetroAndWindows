@@ -346,3 +346,5 @@ The code below as not used; no significant impact or do nothing:
 
 - The key `tab` is pressed at the same time and before the key exponent, trigger the `tab` that moves the mouse coordinate and send a real `²`, it triggers the send window to desktop or to front, following by the time the key is `down`.
 
+- Don't need anymore to blacklist certain apps like steam.exe, all bugs solved and were only temporary during tests.
+- 
