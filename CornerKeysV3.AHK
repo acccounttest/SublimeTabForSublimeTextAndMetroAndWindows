@@ -5,35 +5,38 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 ;SHORTCUTS https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 CoordMode, Mouse, Screen
 
-;Tab , windows and metro enhanced
+
 
 CapsLock::
 Send {tab 1}
 Return
 
+
+
 ~Alt & ~Tab::
-KeyWait,Control,D
-Sleep,100
-WinGet, active_id, ID, A
-WinShow, ahk_id %active_id%
-WinActivate, ahk_id %active_id%
-WinSet, AlwaysOnTop, ON, ahk_id %active_id%
-Sleep,100
-Sleep,100
-GetKeyState, state, RButton
-if (state = "D")
-{
-Send,{Esc}
-}
+KeyWait,Control,D,T3
+    If (ErrorLevel != 1)
+    {
+    Sleep,100
+    WinGet, active_id, ID, A
+    WinShow, ahk_id %active_id%
+    WinActivate, ahk_id %active_id%
+    WinSet, AlwaysOnTop, ON, ahk_id %active_id%
+    Sleep,100
+    }
 return
 
-#If (!WinActive("Counter-Strike Source")) and !WinActive("ahk_exe steam.exe"))
+
+
+
+#If (!WinActive("Counter-Strike Source") and !WinActive("Synergy") and !WinActive("Counter-Strike:") and !WinActive("ahk_exe steam.exe"))
 $tab::
 GetKeyState, state, Shift
 if (state = "D"){
-Send {TAB down}{TAB up}
+Send, {TAB down}{TAB up}
 }
 else{
 Send {Alt down}{Tab down}
@@ -45,12 +48,15 @@ Send {Tab up}
 Send {Alt up}
 MouseMove, 494,454,0
 
+
 GetKeyState, state, RButton
 if (state = "D")
 {
 Send,{Esc}
 }
-Keywait,Control,D
+Keywait,Control,D,T3
+    If (ErrorLevel != 1)
+    {
     Send, {LButton down}
     Send, {LButton up}
     Sleep,100
@@ -59,22 +65,10 @@ Keywait,Control,D
     WinActivate, ahk_id %active_id%
     WinSet, AlwaysOnTop, ON, ahk_id %active_id%
     Sleep,100
+    }
 }
-Return
 #If
-
-
-
-#²::
-Send !{ù}
 Return
-
-
-
-$!²::
-WinGet, active_id, ID, A
-WinSet, AlwaysOnTop, OFF, ahk_id %active_id%
-return
 
 
 
@@ -88,8 +82,7 @@ if (state = "D"){
 WinShow, ahk_id %active_id%
 WinActivate, ahk_id %active_id%
 WinSet, AlwaysOnTop, ON, ahk_id %active_id%
-;Process,Priority,....exe, High
-;WinRestore, ahk_id %active_id%
+;Process,Priority,cstrike.exe, High
 }
 else{
     WinGet, active_id, ID, A
@@ -97,3 +90,16 @@ WinSet, AlwaysOnTop, OFF, ahk_id %active_id%
 WinSet, Bottom,,A
 }
 return
+
+
+; Below is update for app, easy windows switcher, in fact its ´ but depend what lang
+#²::            
+Send !{ù}
+Return
+
+$!²::
+WinGet, active_id, ID, A
+WinSet, AlwaysOnTop, OFF, ahk_id %active_id%
+;WinRestore, ahk_id %active_id%
+return
+
