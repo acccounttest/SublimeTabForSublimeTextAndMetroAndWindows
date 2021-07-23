@@ -336,8 +336,8 @@ The code below as not used; no significant impact or do nothing:
 ;ShiftAltTab
 ```
 
-*
-*1. The followings statements are true for both version 2 and 3:
+* 
+* The followings statements are true for both version 2 and 3:
 - The `shift` lock key is ready to be combined with either ctrl, shift, win, alt ,altgr rightwin,but not right ctrl, combo lets it complete.
 
 - The key `tab` can be combined at the same time or before any other key you would, ex: operator `&`.
