@@ -31,6 +31,8 @@ code of a script into two, but i am not sure it is really good, now see V3 to kn
 
 ##VERSION 3
 
+##V4
+
 ##IDEA
 --------
 Main idea is replace the tab of the keyboard with shift lock, i prefer and is nearer the others keys but much more used.
@@ -336,8 +338,6 @@ The code below as not used; no significant impact or do nothing:
 ;ShiftAltTab
 ```
 
-
-
 1. End.
 1. The followings statements are true for both version 2 and 3:
 - The `shift` lock key is ready to be combined with either ctrl, shift, win, alt ,altgr rightwin,but not right ctrl, combo lets it complete.
@@ -347,4 +347,14 @@ The code below as not used; no significant impact or do nothing:
 - The key `tab` is pressed at the same time and before the key exponent, trigger the `tab` that moves the mouse coordinate and send a real `²`, it triggers the send window to desktop or to front, following by the time the key is `down`.
 
 - Don't need anymore to blacklist certain apps like steam.exe, all bugs solved and were only temporary during tests.
-- 
+
+
+
+##V4
+----
+```This version changed completely how the code works, not the shortcuts.```
+
+If you find a problem with `scrolling`, or if `scrolling` tend to be acting longer while this was just activated and triggered by the app selection event, replace the `control down` and `control up` by the virtualized keys code of them, or use the Dllcall as it was for make the click faster(as decomposing it was not enough in two states).
+
+Use only, when you want to choose an app, the control(usually `left control`) down while the `left click` when you pressed `alt down` and continue the need to handle it, else redondant `clicks` will appear and eventually choose a supplemental window in the background.
+
