@@ -1,3 +1,6 @@
+This project development was not long but last at least one year, feel free to donate what you estimated you have been earn in term of time.
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/ot1985)
+
 ```
 Warning since recent updates, something wrong has been revealed, it seems you need 2 AHK scripts for this to works,
 i didn't had this issue, normally it's not required, but with this script, the double tab will not works, just get 
