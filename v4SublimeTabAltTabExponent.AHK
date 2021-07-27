@@ -114,8 +114,8 @@ MouseMove, 494,454,0
 Return
 
 
-
-~²::
+;Below better to not stat by a ~
+²::
 Sleep,150
 GetKeyState, state, ²
 if (state = "D"){
