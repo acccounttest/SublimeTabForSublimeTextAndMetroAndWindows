@@ -78,7 +78,7 @@ CoordMode, Mouse, Screen
 ```
 
 Or headers made by default with the right click new file then autohotkey, not recommanded:
-```
+```autohotkey
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
@@ -86,7 +86,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ```
 
 Whole script convertible or modifiable
-```
+```autohotkey
 CapsLock::
 Send {tab 1}
 Return
@@ -119,23 +119,26 @@ Return
 ```
 
 This line is not necessary, it help just to avoid to use the tab functionnality with the application not compatible, mostly games due to keep key pressed continuously for example.
-```#If (!WinActive("a window")) and (!WinActive("a game") and !WinActive("another"))```
+```autohotkey
+#If (!WinActive("a window")) and (!WinActive("a game") and !WinActive("another"))```
 ...
-```#If```
+```autohotkey
+#If```
 
 This line is just for send tab normally in another way, that permit for exemple in sublime text to get the completion working normally, not a normal tab with shift key, to look for first completions matches first of libs,..,classes,..,globals... names.
 `Shift`
 
 This is for positionate the mouse accordingly to your resolution supposed to be 1080, but maybe depend your metro banner configuration, it can become usefull with not much apps opened but unselectable when not enough banner space later. Change if you want.
-```
+```autohotkey
 MouseMove, 494,454,0
 ```
 
 This means the state can be pressed or not, D or U, for down or up
-```(state = "D")```
+```autohotkey
+(state = "D")```
 
 Here we replace really the tab
-```
+```autohotkey
 CapsLock::
 Send {tab 1}
 Return
@@ -173,7 +176,7 @@ the same application, notepad compatible, 0 config, it should change in main eur
  for belgium it is ``` ` ``` backtick but it is well triggered by their application, faster than a uncompiled .ahk file, really fast and usefully accessible,
  the ideal is forward it to this: 
 
-```
+```autohotkey
 #²::            
 Send !{ù}
 Return
@@ -202,7 +205,7 @@ If you prefer use another key, you can try, combination of all special keys toge
 
 The unforgettable set always off
 
-```
+```autohotkey
 $!²::
 WinGet, active_id, ID, A
 WinSet, AlwaysOnTop, OFF, ahk_id %active_id%
@@ -211,7 +214,7 @@ return
 
 Here the concept between send window to the desktop, and set it to the front and visible first.
 
-```
+```autohotkey
 ~²::
 Sleep,150
 GetKeyState, state, ²
@@ -238,7 +241,7 @@ return
 ##FREE KEYS
 --------------
 Same others keys in combination.
-```
+```autohotkey
 ;!²::
 ;return
 ;^²::
@@ -246,34 +249,34 @@ Same others keys in combination.
 ```
 
 A popup.
-```
+```autohotkey
 ;MsgBox, "debug purposes"
 ```
 
 Prevent closes, suggest you to modify it and eventually ask and give admin powers before do it.
-```
+```autohotkey
 ;!F4:: return
 ```
 
 Invalid if line is completed not in one line, you need return.
-```
+```autohotkey
 ;*!Esc::
 ```
 
 Works.
-```
+```autohotkey
 $!*Esc::
 return
 ```
 
 Another rebind.
-```
+```autohotkey
 ^Escape::
 return
 ```
 
 Delete the previous behavior to not enter in conflict, normally it should be not incompatible, just the idea is approximatively the same.
-```
+```autohotkey
 #Esc::
 return
 ```
@@ -334,7 +337,7 @@ Warning, maybe this is not a good version for applications with multi windows, t
 The groups are not yet functionals, and idk if i will need them, at the start this was not intended to be as far as programming is not, the code with minimal modifications can react completely differently and break one or more functionalities without any explanations, this script will probably need a conversion for other OS platforms.
 
 The code below as not used; no significant impact or do nothing:
-```
+```autohotkey
 ;GetKeyState, state, CapsLock
 ;SetCapsLockState, alwaysoff
 ;AltTab
@@ -355,7 +358,7 @@ The code below as not used; no significant impact or do nothing:
 
 ##V4
 ----
-```This version changed completely how the code works, not the shortcuts.```
+**This version changed completely how the code works, not the shortcuts.**
 
 If you find a problem with `scrolling`, or if `scrolling` tend to be acting longer while this was just activated and triggered by the app selection event, replace the `control down` and `control up` by the virtualized keys code of them, or use the Dllcall as it was for make the click faster(as decomposing it was not enough in two states).
 
