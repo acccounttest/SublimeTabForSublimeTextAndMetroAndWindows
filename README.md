@@ -120,10 +120,12 @@ Return
 
 This line is not necessary, it help just to avoid to use the tab functionnality with the application not compatible, mostly games due to keep key pressed continuously for example.
 ```autohotkey
-#If (!WinActive("a window")) and (!WinActive("a game") and !WinActive("another"))```
+#If (!WinActive("a window")) and (!WinActive("a game") and !WinActive("another"))
+```
 ...
 ```autohotkey
-#If```
+#If
+```
 
 This line is just for send tab normally in another way, that permit for exemple in sublime text to get the completion working normally, not a normal tab with shift key, to look for first completions matches first of libs,..,classes,..,globals... names.
 `Shift`
