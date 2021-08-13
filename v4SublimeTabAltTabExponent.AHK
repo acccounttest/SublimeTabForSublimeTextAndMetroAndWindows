@@ -67,7 +67,7 @@ else{
 Send {Alt down}{Tab down}
 Keywait, Control
 Send {Control down}
-Sleep 600
+Sleep 300
 Send {Control up}
 Send {Tab up}
 Send {Alt up}
