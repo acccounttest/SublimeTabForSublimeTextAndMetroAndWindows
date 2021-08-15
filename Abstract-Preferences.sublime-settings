@@ -1,0 +1,44 @@
+Below, my sublime text configuration:
+---
+  
+**
+
+Filename: Preferences.sublime-settings
+
+// By default, auto complete will commit the current completion on enter.
+// This setting can be used to make it complete on tab instead.
+// Completing on tab is generally a superior option, as it removes
+// ambiguity between committing the completion and inserting a newline.
+```"auto_complete_commit_on_tab": true,```
+...
+// When enabled, pressing tab will insert the best matching completion.
+// When disabled, tab will only trigger snippets or insert a tab.
+// Shift+tab can be used to insert an explicit tab when tab_completion is
+// enabled.
+```"tab_completion": true,```
+...
+// By default, shift+tab will only unindent if the selection spans
+// multiple lines. When pressing shift+tab at other times, it'll insert a
+// tab character - this allows tabs to be inserted when tab_completion is
+// enabled. Set this to true to make shift+tab always unindent, instead of
+// inserting tabs.
+```"shift_tab_unindent": false```
+...
+// Controls if auto complete is shown when snippet fields are active.
+// Only relevant if auto_complete_commit_on_tab is true.
+```"auto_complete_with_fields": true,```
+...
+// By default, auto complete will commit the current completion on enter.
+// This setting can be used to make it complete on tab instead.
+// Completing on tab is generally a superior option, as it removes
+// ambiguity between committing the completion and inserting a newline.
+```"auto_complete_commit_on_tab": true```
+...
+ // When enabled, pressing tab will insert the best matching completion.
+// When disabled, tab will only trigger snippets or insert a tab.
+// Shift+tab can be used to insert an explicit tab when tab_completion is
+// enabled.
+```"tab_completion": true,```
+
+**
+  
