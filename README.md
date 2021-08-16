@@ -30,11 +30,13 @@ code of a script into two, but i am not sure it is really good, now see V3 to kn
 
 ##FREE KEYS
 
-##VERSION 1 NOW VERSION2
+##(VERSION 1 NOW VERSION2)
 
-##VERSION 3
+##(VERSION 3)
 
 ##V4
+
+##SUBLIME TEXT BEHAVIORS
 
 ##IDEA
 --------
@@ -366,3 +368,12 @@ If you find a problem with `scrolling`, or if `scrolling` tend to be acting long
 
 Use only, when you want to choose an app, the control(usually `left control`) down while the `left click` when you pressed `alt down` and continue the need to handle it, else redondant `clicks` will appear and eventually choose a supplemental window in the background.
 
+
+
+##SUBLIME TEXT BEHAVIORS 3.2 build 3200
+---------------------
+
+Note Sublime text is strange if you switch to this window, it can handle a supplemental control character but it works only if the shortcut to switch the Window is made after the `alt-tab` always on top , supported by the AHK script, only when the choice is made by `Control` key, the same without the need to use a `left click`.
+Example, you selected some carets in your SublimeText and you can't add any more another anywhere you want, your positions are more like locked middle of operations but with a very simple pattern currently used and reduced or simplified, i didn't tried with `modifiers keys`, just press the next `left click` after the window is back, sublime text interpret it like control and `left click`, then an added caret is positioned really anywhere without lose previous markers.
+This is after in circumstantial scenarios, the new values of selected text parts are maybe needed maybe not.
+The time to develop this, i had to see the alternative sublime text `right click` menu, one of the same for its completion pop-up, sometimes different, sometimes slightly, sometimes not, sometimes nothing, it is uncontrollable, i didn't catch it and i don't want, sublime is as well accessible though its own interface to an interpreted API with a reduced interface interaction time and a covenant very reusable.
