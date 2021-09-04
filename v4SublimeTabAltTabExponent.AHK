@@ -97,6 +97,9 @@ MouseMove, 494,454,0
                     WinSet, AlwaysOnTop, ON, ahk_id %active_id%
                     Sleep,100
                 }
+                if (acount>=500){
+                    break
+                }
                 if (bb="D"){
                     Send,{Control down}
                     Send,{Control up}
