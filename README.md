@@ -377,3 +377,59 @@ Note Sublime text is strange if you switch to this window, it can handle a suppl
 Example, you selected some carets in your SublimeText and you can't add any more another anywhere you want, your positions are more like locked middle of operations but with a very simple pattern currently used and reduced or simplified, i didn't tried with `modifiers keys`, just press the next `left click` after the window is back, sublime text interpret it like control and `left click`, then an added caret is positioned really anywhere without lose previous markers.
 This is after in circumstantial scenarios, the new values of selected text parts are maybe needed maybe not.
 The time to develop this, i had to see the alternative sublime text `right click` menu, one of the same for its completion pop-up, sometimes different, sometimes slightly, sometimes not, sometimes nothing, it is uncontrollable, i didn't catch it and i don't want, sublime is as well accessible though its own interface to an interpreted API with a reduced interface interaction time and a covenant very reusable.
+
+
+
+ # Next potential enhancements, two compatibility fix for sticky/toggle/filter/modifiers... keys, here only alt-tab ctrl+esc and alt+esc
+---
+____
+
+This explains why shortcuts and games essentially are not well done, compatible, or crash applications and computers,especially using alt+tab and fullscreen, principaly.
+___
+
+    https://docs.microsoft.com/en-us/windows/deployment/planning/compatibility-fixes-for-windows-8-windows-7-and-windows-vista
+
+This is a long API value from simplest parameters of a call or a configuration in the main registry hive at the location given in the link.
+2 of them can be particularly concerned by this project or others I post on Github.
+Note the sandbox of chrome can already be deactivated but it will lose advert or other functionalities, by deactivating it there are many advantages and disadvantages:
++Gain latency by loading.
+-Lose security and get infected by malwares easier or certainly.
+-Lose functionalities intended from the website not from adverts or based on.
+-Get less compatibility in future, caused by security or evolutivity.
++Memory enhances the time it becomes compatible in newers OS.
+
+2 values referenced:
+ - IgnoreAltTab
+
+The problem occurs when an application fails to function when special key combinations are used.
+
+The fix intercepts the RegisterRawInputDevices API and prevents the delivery of the WM_INPUT messages. This delivery failure forces the included hooks to be ignored and forces DInput to use Windows-specific hooks.
+
+Note
+For more detailed information about this application fix, see Using the IgnoreAltTab Fix.
+
+ - IgnoreChromeSandbox
+
+The fix allows Google Chrome to run on systems that have ntdll loaded above 4GB.
+
+Compatibility:
+---
+
+Windows 10(not tested fully the all my projects)
+Windows 8.1
+Windows 8
+Windows 7
+Windows Server 2012
+Windows Server 2008 R2
+
+Next you could try to understand more about the sandbox and his specialized flags, tokens are in the end.
+https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/design/chrome%3A//tracing
+Apparently the page is no more accessible, maybe the end of the URL is not well done.
+
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-7/cc722093(v=ws.10)
+
+
+The shift key is incuded in sticky keys, by pressing down 5 times or otherwise, following the system and its version and configuration.
+More about this and the utility of the deactivation permanent or temporaly of the filter keys.
+https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/keyboardfilter
+
