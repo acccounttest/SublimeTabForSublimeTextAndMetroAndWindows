@@ -433,3 +433,12 @@ The shift key is incuded in sticky keys, by pressing down 5 times or otherwise, 
 More about this and the utility of the deactivation permanent or temporaly of the filter keys.
 https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/keyboardfilter
 
+##MORE MODIFIER KEYS AND REASONABLE LIMITATIONS
+---
+
+Problem when the shiftlock is blocked without numpad diod on, either:
+-You need send `alt`+`shiftlock` 
+-`ctrl`+`shiftlock`
+
+While this time i did'nt added `ctrl`+`shiftlock`=`ctrl`+`tab` as it's possible to use it already, and more the ctrl+shiftlock could not works as excepted, and the only way to change the `CAPSLOCK` status is send one of the two key combination, by pairs, no others, but i guess i could try it too and why not use a combination to pause the current script, this is doable by using the AHK routine sendmessage, see doc version 1.1, the most reliable version, the L version.
+
