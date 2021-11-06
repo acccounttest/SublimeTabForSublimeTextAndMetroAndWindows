@@ -30,13 +30,17 @@ code of a script into two, but i am not sure it is really good, now see V3 to kn
 
 ##FREE KEYS
 
-##(VERSION 1 NOW VERSION2)
+##FUTURE
 
-##(VERSION 3)
+##THUMBNAILS CONFIGURATION
 
 ##V4
 
-##SUBLIME TEXT BEHAVIORS
+##SUBLIME TEXT BEHAVIORS IN V4
+
+##END
+
+##V5
 
 ##IDEA
 --------
@@ -160,7 +164,7 @@ I use Sublime text version 3200, if you experience problem to send a normal tab 
 
 
 ##Third idea: rebind another same application
-
+---
 What i do:
 - Send window under all others windows, release the key ² very fast.
 - Send the window to the front, always on top, press less 0.5 second same key.
@@ -294,7 +298,7 @@ The idea is keep remain a list of tab that were previously added in a list of al
 
 
 
-##VERSION 1 NOW VERSION2
+##THUMBNAILS CONFIGURATION
 ------------------------
 After the use of the escape key after a `double tab`, the double same key is broken, change the window or type something, it works only when the script does it when we want to close the banner with the `right click` by sending a emulated escape key.
 Change the size of metro thumbnails, see my Windows theme project, about metro thumbnails in `alt+tab`.
@@ -317,18 +321,6 @@ If a problem occurs with the double tab then deactivate it, the normal `alt+tab`
 If you want send a combined keys including `tab` then use the original key tab, ex: `ctrl+tab` or `alt+tab`, note: notepad can bring back to the front just by using `ctrl+alt` keys `down` or not when the window in under the user focus but below a stack of windows, it's normal, this program is exceptional with AHK, don't use it for AHK developments and tests.
 
 This version add possibility to cancel the permanent `alt+tab` by sending escape when the user make a `right click` on it, don't use escape, usually when user send escape it break the same double tab and it need much time and operations to return to the normal detection, otherwise you can simply `click` outside the metro banner but with the `right click`.
-
-
-1. End.
-1. The followings statements are true for both version 2 and 3:
-- The `shift` lock key is ready to be combined with either ctrl, shift, win, alt ,altgr rightwin,but not right ctrl, combo lets it complete.
-
-- The key `tab` can be combined at the same time or before any other key you would, ex: operator `&`.
-
-- The key `tab` is pressed at the same time and before the key exponent, trigger the `tab` that moves the mouse coordinate and send a real `²`, it triggers the send window to desktop or to front, following by the time the key is `down`.
-
-- Don't need anymore to blacklist certain apps like steam.exe, all bugs solved and were only temporary during tests.
-
 
 
 ##V4
@@ -413,3 +405,17 @@ Problem when the shiftlock is blocked without numpad diod on, either:
 
 While this time i did'nt added `ctrl`+`shiftlock`=`ctrl`+`tab` as it's possible to use it already, and more the ctrl+shiftlock could not works as excepted, and the only way to change the `CAPSLOCK` status is send one of the two key combination, by pairs, no others, but i guess i could try it too and why not use a combination to pause the current script, this is doable by using the AHK routine sendmessage, see doc version 1.1, the most reliable version, the L version.
 
+##End.1.
+---
+1.
+1. The followings statements are true for both version 2 and 3:
+- The `shift` lock key is ready to be combined with either ctrl, shift, win, alt ,altgr rightwin,but not right ctrl, combo lets it complete.
+
+- The key `tab` can be combined at the same time or before any other key you would, ex: operator `&`.
+
+- The key `tab` is pressed at the same time and before the key exponent, trigger the `tab` that moves the mouse coordinate and send a real `²`, it triggers the send window to desktop or to front, following by the time the key is `down`.
+
+- Don't need anymore to blacklist certain apps like steam.exe, all bugs solved and were only temporary during tests.
+
+
+##V5
