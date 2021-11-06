@@ -419,3 +419,40 @@ While this time i did'nt added `ctrl`+`shiftlock`=`ctrl`+`tab` as it's possible 
 
 
 ##V5
+---
+The version 5 stopped send continually all the `control` keys and determines application behavior with `modifiers`, the version 4 was perfect to find this even with a timer of 500 to let it less intrusive especially in editors like sublime text, but more, that version added competitive shortcuts to execute permanently, not only the shortcut made that include the `control` key in it was affected but those with another key in combination with `backslash`, just like they could be started with that same second key, the `backslash` on my keyboard as first key of two in a combination, without need to keep it pressed all along, without really send it as application or other OS levels can recognize.
+
+This affected the usage of notepad, editors and other applications without significant advantage except to not have to use shortcuts entirely and continually without systematically terminate it or cancell it.
+
+
+The need to reuse the key you use for `exponent` is easily replaced with the key following tab key, but with this key it's not possible to send it, I tried literally by escaping, or enclosing it, it is triggered by AHK.
+
+
+The different way to execute another key following the `tab` key is made differently, this script is just protected against itself.
+This can be made like Tab & the key, this could be made to be functional for the whole line of digits, tab as a modifier.
+
+
+
+Keys :
+ - Shift Lock sends a Tab.
+ - Alt-tab works normally(suppressed).
+ - Double Tab, maintain alt-tab opened.
+ - Control key can be used after alt-tab and windows will always be on top.
+ - Right click after alt-tab cancel the GUI.
+ - Left click select the window.
+
+ - The three exponents values in time :
+ - Half a second
+ - A second
+ - Two seconds(not defined)
+ - Tab+right clic=Send escape(Removed).
+
+
+If you get troubles using a AHK script with specials characters, try to use theses tips:
+-Reopen the file with encoding utf-8 with BOM(not only utf-8)
+-Escape the character with a tick, i can't represent as usual in markdown because the paired ticks are used and triple too.
+
+```
+`
+```
+
