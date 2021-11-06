@@ -434,28 +434,27 @@ This can be made like Tab & the key, this could be made to be functional for the
 
 
 Keys :
- - Shift Lock sends a Tab.
+- Shift Lock sends a Tab.
+- Alt-tab works normally(suppressed).
  - 
- - Alt-tab works normally(suppressed).
+- Double Tab, maintain alt-tab opened.
  - 
- - Double Tab, maintain alt-tab opened.
+- Control key can be used after alt-tab and windows will always be on top.
  - 
- - Control key can be used after alt-tab and windows will always be on top.
+- Right click after alt-tab cancel the GUI.
  - 
- - Right click after alt-tab cancel the GUI.
- - 
- - Left click select the window.
+- Left click select the window.
  - 
 
- - The three exponents values in time :
+- The three exponents values in time :
  - 
- - Half a second
+- Half a second
  - 
- - A second
+- A second
  - 
- - Two seconds(not defined)
+- Two seconds(not defined)
  - 
- - Tab+right clic=Send escape(Removed).
+- Tab+right clic=Send escape(Removed).
  - 
 
 
