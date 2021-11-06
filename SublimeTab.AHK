@@ -139,3 +139,27 @@ $!*Esc:: return
 ;!F4:: return
 
 ;*!Esc::
+
+
+;This lines below are additionnals, it can help when using a window and its full height can't extend at max, so let switch the taskbar and on top flags.
+;WIN KEY + F4 OR F5
+ABM_SETSTATE    := 10
+
+ABS_NORMAL      := 0x0
+ABS_AUTOHIDE    := 0x1
+ABS_ALWAYSONTOP := 0x2
+
+VarSetCapacity( APPBARDATA , 36, 0 ) 
+Off :=  NumPut(  36, APPBARDATA    ) 
+Off :=  NumPut( WinExist("ahk_class Shell_TrayWnd"), Off+0 )
+
+#F4::
+ NumPut( ABS_ALWAYSONTOP, Off+24 )
+ DllCall("Shell32.dll\SHAppBarMessage", UInt,ABM_SETSTATE, UInt,&APPBARDATA ) 
+Return
+
+#F5::
+ NumPut( ABS_AUTOHIDE|ABS_ALWAYSONTOP, Off+24 )
+ DllCall("Shell32.dll\SHAppBarMessage", UInt,ABM_SETSTATE, UInt,&APPBARDATA )
+Return
+
