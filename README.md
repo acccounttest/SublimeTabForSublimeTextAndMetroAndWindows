@@ -435,23 +435,34 @@ This can be made like Tab & the key, this could be made to be functional for the
 
 Keys :
  - Shift Lock sends a Tab.
+ - 
  - Alt-tab works normally(suppressed).
+ - 
  - Double Tab, maintain alt-tab opened.
+ - 
  - Control key can be used after alt-tab and windows will always be on top.
+ - 
  - Right click after alt-tab cancel the GUI.
+ - 
  - Left click select the window.
+ - 
 
  - The three exponents values in time :
+ - 
  - Half a second
+ - 
  - A second
+ - 
  - Two seconds(not defined)
+ - 
  - Tab+right clic=Send escape(Removed).
+ - 
 
 
 If you get troubles using a AHK script with specials characters, try to use theses tips:
 -Reopen the file with encoding utf-8 with BOM(not only utf-8)
 -Escape the character with a tick, i can't represent as usual in markdown because the paired ticks are used and triple too.
-
+-Use at least 2 AHK script started in same time, this can help with short scripts.
 ```
 `
 ```
