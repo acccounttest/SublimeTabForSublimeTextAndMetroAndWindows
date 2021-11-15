@@ -466,3 +466,6 @@ If you get troubles using a AHK script with specials characters, try to use thes
 `
 ```
 
+Another little anomaly with the old version that used constantly to send `control` keys, without this when `shiftlock` is locked, it has been needed to press `control` with `alt` and `shiftlock`, it restablish the always `capital` on to off, normaly in future, i will check if it is necessary to check if `shiftlock` status can break the show(and btw the choose) of the application switcher, this could replace my current code, this is the path to the symbolic link as lnk, with this Run, "C:\Users\Default\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\Window Switcher.lnk".
+
+
