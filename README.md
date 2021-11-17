@@ -12,7 +12,7 @@ code of a script into two, but i am not sure it is really good, now see V3 to kn
 # Window manager with modifiers or equikeys in corners and SublimeTab for sublimeText , general use and metro alt+tab (For different european keyboards and shortcuts and whole world with tab and shift lock, keys)
 
 
-##IDEA
+##IDEA(SEE PAGE BOTTOM FOR W10)
 
 ##NEEDS
 
@@ -42,7 +42,9 @@ code of a script into two, but i am not sure it is really good, now see V3 to kn
 
 ##V5
 
-##IDEA
+##W10
+
+##IDEA(SEE PAGE BOTTOM FOR W10)
 --------
 Main idea is replace the tab of the keyboard with shift lock, i prefer and is nearer the others keys but much more used.
 
@@ -468,4 +470,11 @@ If you get troubles using a AHK script with specials characters, try to use thes
 
 Another little anomaly with the old version that used constantly to send `control` keys, without this when `shiftlock` is locked, it has been needed to press `control` with `alt` and `shiftlock`, it restablish the always `capital` on to off, normaly in future, i will check if it is necessary to check if `shiftlock` status can break the show(and btw the choose) of the application switcher, this could replace my current code, this is the path to the symbolic link as lnk, with this Run, "C:\Users\Default\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\Window Switcher.lnk".
 
+##W10
+---
+-Double tab normally now a simple press, and coordinates changed into the middle of the screen.
+-Main script triggers are deactivated early, more often and consecutively, even without loss of one of the window focus.
+-Wheel is more or less comprehensive on certain domains, example is unhibernation.
+-Double right click does not refresh the script(as Reload should occur) on a hibernated tab(With marvellous suspender, the best contender since the extension got stopped and BTW splitted).
+-BUG: the exponent key or send window to the background can trigger it to reappear in a shorter detection time.
 
