@@ -477,4 +477,5 @@ Another little anomaly with the old version that used constantly to send `contro
 -Wheel is more or less comprehensive on certain domains, example is unhibernation.
 -Double right click does not refresh the script(as Reload should occur) on a hibernated tab(With marvellous suspender, the best contender since the extension got stopped and BTW splitted).
 -BUG: the exponent key or send window to the background can trigger it to reappear in a shorter detection time.
+-Force Taskbar to show or hide, shortcuts are not working/used anymore the same way, OS manage it clearly differently.
 
