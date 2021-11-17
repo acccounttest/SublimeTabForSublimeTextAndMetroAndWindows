@@ -472,10 +472,11 @@ Another little anomaly with the old version that used constantly to send `contro
 
 ##W10
 ---
+
 -Double tab normally now a simple press, and coordinates changed into the middle of the screen.
--Main script triggers are deactivated early, more often and consecutively, even without loss of one of the window focus.
--Wheel is more or less comprehensive on certain domains, example is unhibernation.
--Double right click does not refresh the script(as Reload should occur) on a hibernated tab(With marvellous suspender, the best contender since the extension got stopped and BTW splitted).
+
 -BUG: the exponent key or send window to the background can trigger it to reappear in a shorter detection time.
+
 -Force Taskbar to show or hide, shortcuts are not working/used anymore the same way, OS manage it clearly differently.
+
 
