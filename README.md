@@ -40,7 +40,9 @@ code of a script into two, but i am not sure it is really good, now see V3 to kn
 
 ##END
 
-##V5
+##V5 AND KEYS
+
+##V8
 
 ##W10
 
@@ -402,9 +404,10 @@ https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/keyboardf
 ---
 
 Problem when the shiftlock is blocked without numpad diod on, either:
--You need send `alt`+`shiftlock` 
--`ctrl`+`shiftlock`
-
+-You need send:
+ - `alt`+`shiftlock` 
+ - `ctrl`+`shiftlock`
+ - `ctrl`+`alt`+`shiftlock` 
 While this time i did'nt added `ctrl`+`shiftlock`=`ctrl`+`tab` as it's possible to use it already, and more the ctrl+shiftlock could not works as excepted, and the only way to change the `CAPSLOCK` status is send one of the two key combination, by pairs, no others, but i guess i could try it too and why not use a combination to pause the current script, this is doable by using the AHK routine sendmessage, see doc version 1.1, the most reliable version, the L version.
 
 ##End.1.
@@ -420,7 +423,7 @@ While this time i did'nt added `ctrl`+`shiftlock`=`ctrl`+`tab` as it's possible 
 - Don't need anymore to blacklist certain apps like steam.exe, all bugs solved and were only temporary during tests.
 
 
-##V5
+##V5 AND KEYS
 ---
 The version 5 stopped send continually all the `control` keys and determines application behavior with `modifiers`, the version 4 was perfect to find this even with a timer of 500 to let it less intrusive especially in editors like sublime text, but more, that version added competitive shortcuts to execute permanently, not only the shortcut made that include the `control` key in it was affected but those with another key in combination with `backslash`, just like they could be started with that same second key, the `backslash` on my keyboard as first key of two in a combination, without need to keep it pressed all along, without really send it as application or other OS levels can recognize.
 
@@ -470,6 +473,17 @@ If you get troubles using a AHK script with specials characters, try to use thes
 
 Another little anomaly with the old version that used constantly to send `control` keys, without this when `shiftlock` is locked, it has been needed to press `control` with `alt` and `shiftlock`, it restablish the always `capital` on to off, normaly in future, i will check if it is necessary to check if `shiftlock` status can break the show(and btw the choose) of the application switcher, this could replace my current code, this is the path to the symbolic link as lnk, with this Run, "C:\Users\Default\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\Window Switcher.lnk".
 
+
+
+##W8
+---
+
+Warning script can be broken, under Windows 8 and probably w10(but script part is commented out), if the code part of the windows taskbar double shortcut(one after one for sure bar is reduced) and only this code part, if at start(after headers) or at end, it break differently:
+-At start, it can works if it was previously written the last lines in the script, but it will stop the others main functionnalitites, can't reload.
+-At the end it will stop after a moment, like upper, maybe longer, but others functionnalitites can continue, if this stop, you probably need create  another script with that code alone separated, probably where more matching code part can reside to be interpretted in the same way or sens or reading.
+
+
+
 ##W10
 ---
 
@@ -478,5 +492,6 @@ Another little anomaly with the old version that used constantly to send `contro
 -BUG: the exponent key or send window to the background can trigger it to reappear in a shorter detection time.
 
 -Force Taskbar to show or hide, shortcuts are not working/used anymore the same way, OS manage it clearly differently.
+
 
 
