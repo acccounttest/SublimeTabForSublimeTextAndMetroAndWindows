@@ -479,8 +479,8 @@ Another little anomaly with the old version that used constantly to send `contro
 ---
 
 Warning script can be broken, under Windows 8 and probably w10(but script part is commented out), if the code part of the windows taskbar double shortcut(one after one for sure bar is reduced) and only this code part, if at start(after headers) or at end, it break differently:
--At start, it can works if it was previously written the last lines in the script, but it will stop the others main functionnalitites, can't reload.
--At the end it will stop after a moment, like upper, maybe longer, but others functionnalitites can continue, if this stop, you probably need create  another script with that code alone separated, probably where more matching code part can reside to be interpretted in the same way or sens or reading.
+ - At start, it can works if it was previously written the last lines in the script, but it will stop the others main functionnalitites, can't reload.
+ - At the end it will stop after a moment, like upper, maybe longer, but others functionnalitites can continue, if this stop, you probably need create  another script with that code alone separated, probably where more matching code part can reside to be interpretted in the same way or sens or reading.
 
 
 
