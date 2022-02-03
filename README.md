@@ -9,7 +9,7 @@ alive and not close immediately too, there must be code lines in it under the he
 least 2 .AHK file started, if you don't know what start, choose something you want bind or rebind or simply cut the
 code of a script into two, but i am not sure it is really good, now see V3 to know all.
 ```
-# Window manager with modifiers or equikeys in corners and SublimeTab for sublimeText , general use and metro alt+tab (For different european keyboards and shortcuts and whole world with tab and shift lock, keys)
+# Window manager with modifiers or equikeys in corners and SublimeTab for sublimeText , general use and metro alt+tab(double TAB) (For different european keyboards and shortcuts and whole world with shift lock is TAB, keys)
 
 
 ##IDEA(SEE PAGE BOTTOM FOR W10)
