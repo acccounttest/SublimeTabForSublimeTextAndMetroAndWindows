@@ -130,7 +130,7 @@ return
 
 
 
-$!*Esc:: return
+;$!*Esc:: return
 
 ^Escape:: return
 
