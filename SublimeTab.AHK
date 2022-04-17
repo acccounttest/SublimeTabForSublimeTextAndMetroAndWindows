@@ -141,6 +141,24 @@ return
 ;*!Esc::
 
 
+^v::
+if !WinActive("ahk_exe sublime_text.exe")
+{
+    ;msgbox,"dds"
+    ;SendInput,^v
+    ;Send,^{vk56}
+    ;Send,%Clipboard%
+    ;Send,^{vk56}
+    ;only this below should not alter clipboard content and permit to not add indentation in sublime itself in many langages.
+    Send,+{Ins}
+    ;Note this could not works as before incertain applications, ex: One commander V2, a pasted clipboard content in a folder does not create a new file named by default with the date.
+    Return
+}
+;works indentations as expected.
+Send,^+v
+return
+
+
 ;This lines below are additionnals, it can help when using a window and its full height can't extend at max, so let switch the taskbar and on top flags.
 ;WIN KEY + F4 OR F5
 ABM_SETSTATE    := 10
