@@ -142,7 +142,7 @@ return
 
 
 ^v::
-if !WinActive("ahk_exe sublime_text.exe")
+if !WinActive("ahk_class PX_WINDOW_CLASS ahk_exe sublime_text.exe")
 {
     ;msgbox,"dds"
     ;SendInput,^v
