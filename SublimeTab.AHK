@@ -158,6 +158,52 @@ if !WinActive("ahk_class PX_WINDOW_CLASS ahk_exe sublime_text.exe")
 Send,^+v
 return
 
++WheelUp::
+oki:=WinActive("ahk_exe sublime_text.exe")
+if (oki)
+{
+    ActiveHwnd := WinExist("A")
+
+    SendInput,+{WheelUp}
+    ;Sleep,50
+    if (oki=ActiveHwnd)
+    {
+    SendInput,+{WheelUp}
+    ;Sleep,50
+    SendInput,+{WheelUp}
+    ;Sleep,50
+    SendInput,+{WheelUp}
+    }
+}
+else
+{
+SendInput,+{WheelUp} 
+}
+return
+
+
++WheelDown::
+oki:=WinActive("ahk_exe sublime_text.exe")
+if (oki)
+{
+    ActiveHwnd := WinExist("A")
+    SendInput,+{WheelDown}
+    if (oki=ActiveHwnd)
+    {
+    ;Sleep,50
+    SendInput,+{WheelDown}
+    ;Sleep,50
+    SendInput,+{WheelDown}
+    ;Sleep,50
+    SendInput,+{WheelDown}
+    }
+}
+else
+{
+SendInput,+{WheelDown}
+}
+return
+
 
 ;This lines below are additionnals, it can help when using a window and its full height can't extend at max, so let switch the taskbar and on top flags.
 ;WIN KEY + F4 OR F5
