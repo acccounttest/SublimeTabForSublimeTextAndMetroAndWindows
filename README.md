@@ -508,4 +508,18 @@ Warning script can be broken, under Windows 8 and probably w10(but script part i
 - I can suggest you to use a rare modifier with an original letter, something like Window key or **Fn** with **v**.
 - It's mostly all windows UI parts that are concerned, the risk it produce something else or something new is very low, the only thing that could happend is nothing that has been expected.
 
+## Notes about Browser app and keys allowed or not:
+---
+
+ - A little information about chrome.exe, this application tend to be more protected by externals tools, this is my case, with antivirus that does   not use an extension but show it is and it can be permanently.
+ - This protection does not allow certain keys by analysis in their HIPS, this block it even if you blacklist the full AHK main executable path,     hopefully it does not interfer with all the mouse and keyboard shortcuts in the project ChromeTabMouse(made too with this langage),it must be in  
+ - This project not in the current, because i only found this as a solution included in all versions.
+
+ - This time i needed to add a modifier to avoid the HIPS to be triggered, here no need all the lines after exponent(The top left key in my case), we know where we are.
+```ahk
+!²::
+WinSet, Bottom,,A
+return
+```
+
 
