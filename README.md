@@ -512,9 +512,7 @@ Warning script can be broken, under Windows 8 and probably w10(but script part i
 ---
 
  - A little information about chrome.exe, this application tend to be more protected by externals tools, this is my case, with antivirus that does   not use an extension but show it is and it can be permanently.
- - This protection does not allow certain keys by analysis in their HIPS, this block it even if you blacklist the full AHK main executable path,     hopefully it does not interfer with all the mouse and keyboard shortcuts in the project ChromeTabMouse(made too with this langage),it must be in  
- - This project not in the current, because i only found this as a solution included in all versions.
-
+ - This protection does not allow certain keys by analysis in their HIPS, this block it even if you blacklist the full AHK main executable path,     hopefully it does not interfer with all the mouse and keyboard shortcuts in the project ChromeTabMouse(made too with this langage).
  - This time i needed to add a modifier to avoid the HIPS to be triggered, here no need all the lines after exponent(The top left key in my case), we know where we are.
 ```ahk
 !²::
@@ -522,4 +520,12 @@ WinSet, Bottom,,A
 return
 ```
 
-
+- BUT, i had my browser sent in the background since my HIPS is trigered and add any path in exceptions lists does change nothing, browser continue to trigger the key(that should be blocked by antivirus, option: security tools and browser protection, note this isn't the complete browser protection, originally it was executed only an empty browser secured for transactions, now it can be always the same protection everytimes, ex: protec against keylogger but collapse with others software(s), at least not mouse software(s)), to send in background the current window(exponent key, the top left keyboard key in my case), but this should be refused by the antivirus(i had 8go of logging of my HIPS in one week but it was not the script in questin but more AHK , x per seconds only since browser full sec was activated with he highlighted border all around the browser window.), it's not the only problem, the other was the key exponent is sent each time i press alternatively keys ' and e, probably more due to the quote character, so it must be fixed like this just below ²:: in the script:
+```ahk
+²::... is already in the script
+opiii:=WinActive("ahk_exe chrome.exe")
+if (!(opiii=0x0))
+{
+    Return
+}
+```
