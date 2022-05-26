@@ -520,6 +520,30 @@ WinSet, Bottom,,A
 return
 ```
 
+Finaly to get the same functionnality present from SublimeTab in ChromeTabMouse(or in a browser with analysed keyboard), we can use it in another script(or the same) with a modifier, it's only due to advanced anti-virus protetion functionnalities like in HIPS.
+
+```ahk
+!²::
+    sleep, 150
+    ;GetKeyState, state, ²
+    ;curiously this one does not works here
+    state:=GetKeyState("²","P")
+    ;msgbox, %state%
+    ;if (state = "D")
+    if (state = 1)
+    {
+        WinGet, active_id, ID, A
+        WinShow, ahk_id %active_id%
+        WinActivate, ahk_id %active_id%
+        WinSet, AlwaysOnTop, ON, ahk_id %active_id%
+    }
+    else
+    {
+        WinSet, Bottom,,A
+    }
+return
+```
+
 - BUT, i had my browser sent in the background since my HIPS is trigered and add any path in exceptions lists does change nothing, browser continue to trigger the key(that should be blocked by antivirus, option: security tools and browser protection, note this isn't the complete browser protection, originally it was executed only an empty browser secured for transactions, now it can be always the same protection everytimes, ex: protec against keylogger but collapse with others software(s), at least not mouse software(s)), to send in background the current window(exponent key, the top left keyboard key in my case), but this should be refused by the antivirus(i had 8go of logging of my HIPS in one week but it was not the script in questin but more AHK , x per seconds only since browser full sec was activated with he highlighted border all around the browser window.), it's not the only problem, the other was the key exponent is sent each time i press alternatively keys ' and e, probably more due to the quote character, so it must be fixed like this just below ²:: in the script:
 ```ahk
 ²::... is already in the script
