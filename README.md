@@ -553,3 +553,13 @@ if (!(opiii=0x0))
     Return
 }
 ```
+
+As you can see, what i did in this chapter, what i didn't:
+Did:
+ - Force app always on top.
+ - Send current window under all others.
+ - But Browser get random keys.
+Did not:
+ - Just supress the always on top status.
+
+So i abandonned the idea to protect this browser, plus it tend to send many symbols anytime...maybe better to active it only when you are going to pay something.
