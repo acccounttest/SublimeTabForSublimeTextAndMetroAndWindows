@@ -465,7 +465,21 @@ Warning script can be broken, under Windows 8 and probably w10(but script part i
 
 ## Notes about ^v::
 ---
-
+<strike>
 - Could not works in explorer windows and others applications, to not break others apps too i didn't added another original paste function more generic as it should be almost 100% compatible with the system, here is only for Python and Sublime text, it works well in python because it paste to the current line without have to firstly add *tab(s)* or correct indentation later, while it can too paste multiple lines without deform anything, ommit or add indentation proportionnaly to original line bloc, something that should works certainly with clipboard application or sublime text extensions differently or similarly.
 - I can suggest you to use a rare modifier with an original letter, something like Window key or **Fn** with **v**.
 - It's mostly all windows UI parts that are concerned, the risk it produce something else or something new is very low, the only thing that could happend is nothing that has been expected.
+</strike>
+I have not found how to get a clue against every type of paste in all applications, i prefered not override default <kbd>control-v</kbd>, but more reuse only double <kbd>v</kbd> in **sublime** for my formatting.
+Maybe you would prefer not overide at all the paste even by double v so comment by ; this line:
+
+```ahk
+Send,+{Ins}
+```
+You can find after this:
+```ahk
+:*:vv::
+;...
+return
+```
+
