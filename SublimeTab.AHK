@@ -17,76 +17,77 @@ Return
 
 #If (!WinActive("Counter-Strike Source") and !WinActive("Synergy") and !WinActive("Counter-Strike:"))
 $tab::
-;GetKeyState, aastate, Alt
-;if (aastate = "D"){
-;Return
-;}
-
-;GetKeyState, bbstate, Tab
-;if (bbstate = "U"){
-;if (aastate = "D"){
-;Return
-;}
-;}
-
-GetKeyState, state, Shift
-if (state = "D"){
-Send, {TAB down}{TAB up}
-}  
-else{
-Send {Alt down}{Tab down}
-Keywait, Control
-Send {Control down}
-Sleep 300
-Send {Control up}
-Send {Tab up}
-Send {Alt up}
-
+;;GetKeyState, aastate, Alt
+;;if (aastate = "D"){
+;;Return
+;;}
+;
+;;GetKeyState, bbstate, Tab
+;;if (bbstate = "U"){
+;;if (aastate = "D"){
+;;Return
+;;}
+;;}
+;
+;GetKeyState, state, Shift
+;if (state = "D"){
+;Send, {TAB down}{TAB up}
+;}  
+;else{
+;Send {Alt down}{Tab down}
+;Keywait, Control
+;Send {Control down}
+;Sleep 300
+;Send {Control up}
+;Send {Tab up}
+;Send {Alt up}
+;
 ;cant works
 ;Send ^!{tab}
-
-MouseMove, 494,454,0
-    Loop{   
-            getkeystate,escme,Esc, D
-            if (escme="D")
-            {
-                break
-            }
-            ;getkeystate,escmetoo,RButton, D
-            ;if (escmetoo="D")
-            ;{
-            ;    Send,{Esc}
-            ;    break
-            ;}
-            getkeystate,aa,Control, D
-            getkeystate,bb,LButton, D
-            If (aa="D" OR bb="D"){
-                if (aa="D"){
-                    Send, {LButton down}
-                    Send, {LButton up}
-                    Sleep,100
-                    WinGet, active_id, ID, A
-                    WinShow, ahk_id %active_id%
-                    WinActivate, ahk_id %active_id%
-                    WinSet, AlwaysOnTop, ON, ahk_id %active_id%
-                    Sleep,100
-                }
-                ;if (acount>=500){
-                ;    break
-                ;}
-                ;if (bb="D"){
-                ;    Send,{Control down}
-                ;    Send,{Control up}
-                ;}
-                break
-            }
-            acount+=1
-            if (acount>=1500){
-                break
-            }
-            Sleep 1
-    }
-}
+;
+;MouseMove, 494,454,0
+;    Loop{   
+;            getkeystate,escme,Esc, D
+;            if (escme="D")
+;            {
+;                break
+;            }
+;            ;getkeystate,escmetoo,RButton, D
+;            ;if (escmetoo="D")
+;            ;{
+;            ;    Send,{Esc}
+;            ;    break
+;            ;}
+;            getkeystate,aa,Control, D
+;            getkeystate,bb,LButton, D
+;            If (aa="D" OR bb="D"){
+;                if (aa="D"){
+;                    Send, {LButton down}
+;                    Send, {LButton up}
+;                    Sleep,100
+;                    WinGet, active_id, ID, A
+;                    WinShow, ahk_id %active_id%
+;                    WinActivate, ahk_id %active_id%
+;                    WinSet, AlwaysOnTop, ON, ahk_id %active_id%
+;                    Sleep,100
+;                }
+;                ;if (acount>=500){
+;                ;    break
+;                ;}
+;               ;if (bb="D"){
+;                ;    Send,{Control down}
+;                ;    Send,{Control up}
+;                ;}
+;                break
+;            }
+;            acount+=1
+;            if (acount>=1500){
+;                break
+;            }
+;            Sleep 1
+;    }
+;}
+Run, "C:\Users\Default\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\Window Switcher.lnk"
 #If
 Return
 
