@@ -412,7 +412,7 @@ Keys :
  - 
 - Double Tab, maintain alt-tab opened(Now it's a single tap).
  - 
-- Control key can be used after alt-tab and windows will always be on top(no more since one line code).
+- Control key can be used after alt-tab and windows will always be on top(no more since one line code, but whole code about $tab needed to be in double in two separated AHK scripts).
  - 
 - Right click after alt-tab cancel the GUI, no more since one line is enough all platforms.
  - 
