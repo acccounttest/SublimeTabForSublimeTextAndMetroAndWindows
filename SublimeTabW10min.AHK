@@ -143,22 +143,34 @@ Necessary key for ChromeTabMouse
 
 ;*!Esc::
 
-^v::
-if !WinActive("ahk_class PX_WINDOW_CLASS ahk_exe sublime_text.exe")
+;^v::
+;if !WinActive("ahk_class PX_WINDOW_CLASS ahk_exe sublime_text.exe")
+;{
+;    ;msgbox,"dds"
+;    ;SendInput,^v
+;    ;Send,^{vk56}
+;    ;Send,%Clipboard%
+;    ;Send,^{vk56}
+;    ;only this below should not alter clipboard content and permit to not add indentation in sublime itself in many langages.
+;    Send,+{Ins}
+;    ;Note this could not works as before incertain applications, ex: One commander V2, a pasted clipboard content in a folder does not create a new file named by default with the date.
+;    Return
+;}
+;;works indentations as expected.
+;Send,^+v
+;return
+
+:*:vv::
+If WinActive("ahk_class PX_WINDOW_CLASS ahk_exe sublime_text.exe")
 {
-    ;msgbox,"dds"
-    ;SendInput,^v
-    ;Send,^{vk56}
-    ;Send,%Clipboard%
-    ;Send,^{vk56}
-    ;only this below should not alter clipboard content and permit to not add indentation in sublime itself in many langages.
-    Send,+{Ins}
-    ;Note this could not works as before incertain applications, ex: One commander V2, a pasted clipboard content in a folder does not create a new file named by default with the date.
-    Return
-}
-;works indentations as expected.
 Send,^+v
-return
+}
+else
+{
+    ;Send,^v
+    Send,+{Ins}
+}
+return 
 
 +WheelUp::
 oki:=WinActive("ahk_exe sublime_text.exe")
