@@ -34,10 +34,6 @@ code of a script into two, but i am not sure it is really good, now see V3 to kn
 
 ##THUMBNAILS CONFIGURATION
 
-##V4
-
-##SUBLIME TEXT BEHAVIORS IN V4
-
 ##END
 
 ##V5 AND KEYS
@@ -333,24 +329,6 @@ If you want send a combined keys including `tab` then use the original key tab, 
 This version add possibility to cancel the permanent `alt+tab` by sending escape when the user make a `right click` on it, don't use escape, usually when user send escape it break the same double tab and it need much time and operations to return to the normal detection, otherwise you can simply `click` outside the metro banner but with the `right click`.
 
 
-##V4
-----
-**This version changed completely how the code works, not the shortcuts.**
-
-If you find a problem with `scrolling`, or if `scrolling` tend to be acting longer while this was just activated and triggered by the app selection event, replace the `control down` and `control up` by the virtualized keys code of them, or use the Dllcall as it was for make the click faster(as decomposing it was not enough in two states).
-
-Use only, when you want to choose an app, the control(usually `left control`) down while the `left click` when you pressed `alt down` and continue the need to handle it, else redondant `click` or `control` will appear and eventually choose a supplemental window in the background, because send `click` will send `control` and vice versa until the countdown, normally 1500 seconds, i have changed source to cancel this after 0.5 milliseconds, like this it will stop send keys at least in sublime text.
-
-
-
-##SUBLIME TEXT BEHAVIORS 3.2 build 3200
----------------------
-(only in v4, there are more updates now)
-Note Sublime text is strange if you switch to this window, it can handle a supplemental control character, supported by the AHK script, only when the choice is made by `Control` key, the same without the need to use a `left click`.
-Example, you selected some carets in your SublimeText and you can't add any more another anywhere you want, your positions are more like locked middle of operations but with a very simple pattern currently used and reduced or simplified, i didn't tried with `modifiers keys`, just press the next `left click` after the window is back, sublime text interpret it like control and `left click`, then an added caret is positioned really anywhere without lose previous markers.
-This is after in circumstantial scenarios, the new values of selected text parts are maybe needed maybe not.
-The time to develop this, i had to see the alternative sublime text `right click` menu, one of the same for its completion pop-up, sometimes different, sometimes slightly, sometimes not, sometimes nothing, it is uncontrollable, i didn't catch it and i don't want, sublime is as well accessible though its own interface to an interpreted API with a reduced interface interaction time and a covenant very reusable.
-
 
 (Mandatory)
  # Next potential enhancements, two compatibility fix for sticky/toggle/filter/modifiers... keys, here only alt-tab ctrl+esc and alt+esc
@@ -387,13 +365,10 @@ The fix allows Google Chrome to run on systems that have ntdll loaded above 4GB.
 
 Compatibility:
 ---
-
-Windows 10(not tested fully the all my projects)
-Windows 8.1
-Windows 8
-Windows 7
-Windows Server 2012
-Windows Server 2008 R2
+Maybe upper.
+Windows 10(not tested fully the all my projects).
+Windows 8.
+Maybe older.
 
 Next you could try to understand more about the sandbox and his specialized flags, tokens are in the end.
 https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/design/chrome%3A//tracing
@@ -416,19 +391,6 @@ Problem when the shiftlock is blocked without numpad diod on, either:
  - `ctrl`+`alt`+`shiftlock` 
 While this time i did'nt added `ctrl`+`shiftlock`=`ctrl`+`tab` as it's possible to use it already, and more the ctrl+shiftlock could not works as excepted, and the only way to change the `CAPSLOCK` status is send one of the two key combination, by pairs, no others, but i guess i could try it too and why not use a combination to pause the current script, this is doable by using the AHK routine sendmessage, see doc version 1.1, the most reliable version, the L version.
 
-##End.1.
----
-1.
-1. The followings statements are true for both version 2 and 3:
-- The `shift` lock key is ready to be combined with either ctrl, shift, win, alt ,altgr rightwin,but not right ctrl, combo lets it complete.
-
-- The key `tab` can be combined at the same time or before any other key you would, ex: operator `&`.
-
-- The key `tab` is pressed at the same time and before the key exponent, trigger the `tab` that moves the mouse coordinate and send a real `²`, it triggers the send window to desktop or to front, following by the time the key is `down`.
-
-- Don't need anymore to blacklist certain apps like steam.exe, all bugs solved and were only temporary during tests.
-
-
 ##V5 AND KEYS
 ---
 The version 5 stopped send continually all the `control` keys and determines application behavior with `modifiers`, the version 4 was perfect to find this even with a timer of 500 to let it less intrusive especially in editors like sublime text, but more, that version added competitive shortcuts to execute permanently, not only the shortcut made that include the `control` key in it was affected but those with another key in combination with `backslash`, just like they could be started with that same second key, the `backslash` on my keyboard as first key of two in a combination, without need to keep it pressed all along, without really send it as application or other OS levels can recognize.
@@ -448,11 +410,11 @@ Keys :
 - Shift Lock sends a Tab.
 - Alt-tab works normally(suppressed).
  - 
-- Double Tab, maintain alt-tab opened.
+- Double Tab, maintain alt-tab opened(Now it's a single tap).
  - 
-- Control key can be used after alt-tab and windows will always be on top.
+- Control key can be used after alt-tab and windows will always be on top(no more since one line code).
  - 
-- Right click after alt-tab cancel the GUI.
+- Right click after alt-tab cancel the GUI, no more since one line is enough all platforms.
  - 
 - Left click select the window.
  - 
@@ -507,60 +469,3 @@ Warning script can be broken, under Windows 8 and probably w10(but script part i
 - Could not works in explorer windows and others applications, to not break others apps too i didn't added another original paste function more generic as it should be almost 100% compatible with the system, here is only for Python and Sublime text, it works well in python because it paste to the current line without have to firstly add *tab(s)* or correct indentation later, while it can too paste multiple lines without deform anything, ommit or add indentation proportionnaly to original line bloc, something that should works certainly with clipboard application or sublime text extensions differently or similarly.
 - I can suggest you to use a rare modifier with an original letter, something like Window key or **Fn** with **v**.
 - It's mostly all windows UI parts that are concerned, the risk it produce something else or something new is very low, the only thing that could happend is nothing that has been expected.
-
-## Notes about Browser app and keys allowed or not:
----
-
- - A little information about chrome.exe, this application tend to be more protected by externals tools, this is my case, with antivirus that does   not use an extension but show it is and it can be permanently.
- - This protection does not allow certain keys by analysis in their HIPS, this block it even if you blacklist the full AHK main executable path,     hopefully it does not interfer with all the mouse and keyboard shortcuts in the project ChromeTabMouse(made too with this langage).
- - This time i needed to add a modifier to avoid the HIPS to be triggered, here no need all the lines after exponent(The top left key in my case), we know where we are.
-```ahk
-!²::
-WinSet, Bottom,,A
-return
-```
-
-Finaly to get the same functionnality present from SublimeTab in ChromeTabMouse(or in a browser with analysed keyboard), we can use it in another script(or the same) with a modifier, it's only due to advanced anti-virus protetion functionnalities like in HIPS.
-
-```ahk
-!²::
-    sleep, 150
-    ;GetKeyState, state, ²
-    ;curiously this one does not works here
-    state:=GetKeyState("²","P")
-    ;msgbox, %state%
-    ;if (state = "D")
-    if (state = 1)
-    {
-        WinGet, active_id, ID, A
-        WinShow, ahk_id %active_id%
-        WinActivate, ahk_id %active_id%
-        WinSet, AlwaysOnTop, ON, ahk_id %active_id%
-    }
-    else
-    {
-        WinSet, Bottom,,A
-    }
-return
-```
-
-- BUT, i had my browser sent in the background since my HIPS is trigered and add any path in exceptions lists does change nothing, browser continue to trigger the key(that should be blocked by antivirus, option: security tools and browser protection, note this isn't the complete browser protection, originally it was executed only an empty browser secured for transactions, now it can be always the same protection everytimes, ex: protec against keylogger but collapse with others software(s), at least not mouse software(s)), to send in background the current window(exponent key, the top left keyboard key in my case), but this should be refused by the antivirus(i had 8go of logging of my HIPS in one week but it was not the script in questin but more AHK , x per seconds only since browser full sec was activated with he highlighted border all around the browser window.), it's not the only problem, the other was the key exponent is sent each time i press alternatively keys ' and e, probably more due to the quote character, so it must be fixed like this just below ²:: in the script:
-```ahk
-²::... is already in the script
-opiii:=WinActive("ahk_exe chrome.exe")
-if (!(opiii=0x0))
-{
-    Return
-}
-```
-
-As you can see, what i did in this chapter, what i didn't:
-Did: 
- - Force app always on top.
- - Send current window under all others.
- - But Browser get random keys.
-
-Did not: 
- - Just supress the always on top status.
-
-So i abandonned the idea to protect this browser, plus it tend to send many symbols anytime...maybe better to active it only when you are going to pay something.
