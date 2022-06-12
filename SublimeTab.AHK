@@ -88,8 +88,9 @@ $tab::
 ;    }
 ;}
 Run, "C:\Users\Default\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\Window Switcher.lnk"
+MouseMove, 494,454,0
+return
 #If
-Return
 
 
 ²::
