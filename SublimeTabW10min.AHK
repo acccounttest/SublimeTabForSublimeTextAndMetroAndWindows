@@ -160,7 +160,7 @@ Necessary key for ChromeTabMouse
 ;Send,^+v
 ;return
 
-:*:vv::
+:*?:vv::
 If WinActive("ahk_class PX_WINDOW_CLASS ahk_exe sublime_text.exe")
 {
 Send,^+v
