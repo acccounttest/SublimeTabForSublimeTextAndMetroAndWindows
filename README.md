@@ -450,7 +450,13 @@ Warning script can be broken, under Windows 8 and probably w10(but script part i
  - At start, it can works if it was previously written the last lines in the script, but it will stop the others main functionnalitites, can't reload.
  - At the end it will stop after a moment, like upper, maybe longer, but others functionnalitites can continue, if this stop, you probably need create  another script with that code alone separated, probably where more matching code part can reside to be interpretted in the same way or sens or reading.
 
-
+Latest version and lost functionnalities due to code only a single line to make the banner of the "apps" thumbnails :
+---
+- Sometimes the need to do right click first before the left when you choose a thumbnails, the banner is like stuck else, note it could be the case even if not.
+- Always on top is no more needed, it is included in other keys.
+- Type it in certains applications that could have been changedin the way they react against a normal tab or more, maybe less "apps" only one tab key.
+- ...
+- 
 
 ##W10
 ---
