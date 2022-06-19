@@ -407,17 +407,19 @@ This can be made like Tab & the key, this could be made to be functional for the
 
 
 Keys :
-- Shift Lock sends a Tab.
-- Alt-tab works normally(suppressed).
+ - Shift Lock sends a Tab.
+ - Alt-tab works normally(suppressed).
  - 
-- Double Tab, maintain alt-tab opened(Now it's a single tap).
+ - Double Tab, maintain alt-tab opened(Now it's a single tap).
  - 
-- Control key can be used after alt-tab and windows will always be on top(no more since one line code, but whole code about $tab needed to be in double in two separated AHK scripts).
+ - Control key can be used after alt-tab and windows will always be on top(no more since one line code, but whole code about $tab needed to be in double in two separated AHK scripts).
  - 
-- Right click after alt-tab cancel the GUI, no more since one line is enough all platforms.
+ - Right click after alt-tab cancel the GUI, no more since one line is enough all platforms.
  - 
-- Left click select the window.
+ - Left click select the window.
  - 
+ - Alt + Right click still necessary since one line code was implemented for all solutions, usually not specially, example with CTM that can get system clipboard frozen, so you must quit the current browser concerned, using SublimeTab with a single Tab does not solve the banner that continue to be shown, even a simple right click does not change the white highlight around windows during this shortcut and the other with the modifer too. 
+
 
 - The three exponents values in time :
  - 
@@ -469,7 +471,7 @@ Latest version and lost functionnalities due to code only a single line to make 
 
 
 
-## Notes about ^v::
+## Notes about paste with/wo indentation, now universal with vv
 ---
 <strike>
 - Could not works in explorer windows and others applications, to not break others apps too i didn't added another original paste function more generic as it should be almost 100% compatible with the system, here is only for Python and Sublime text, it works well in python because it paste to the current line without have to firstly add *tab(s)* or correct indentation later, while it can too paste multiple lines without deform anything, ommit or add indentation proportionnaly to original line bloc, something that should works certainly with clipboard application or sublime text extensions differently or similarly.
