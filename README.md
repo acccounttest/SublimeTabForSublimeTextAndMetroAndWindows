@@ -486,8 +486,43 @@ Send,+{Ins}
 ```
 You can find after this:
 ```ahk
-:*:vv::
+:*?:vv::
 ;...
 return
+```
+
+
+
+## not included, open task manager faster
+---
+
+Another *trick* for thoses that like to use and switch between <kbd>mouse</kbd> and  <kbd>numpad keys</kbd>
+Instead use more <kbd>letter keys</kbd> or your finger(s) to open the task manager, simply press <kbd>control</kbd> and <kbd>Numpad Del</kbd> keys, considering <kbd>numlock status</kbd> is turned ON.
+Normally replace the pixels where the mouse is positionned because it's for 1080p scren resolution, this is due to during the UAC prompt, no AHK script can continue before and while and after the popup start to really make options yes and no to be visible.
+Only this shortcut can open directly the task manager, or eventually a direct <kbd>right click</kbd> to the startmenu or to the bottom left corner of the screen, and then only <kbd>letter g</kbd> to access the prompt yes and no.
+
+
+This code below was not added by default in the script, but it has been tested.
+
+```ahk
+^NumpadDot::
+MouseMove,1028,550
+Send,^+{Esc}
+;MouseMove,1028,550
+
+;Sleep,1000
+;Send,{click}
+;SendInput,{Left}
+;Sleep,50
+;Send,{Enter}
+return
+```
+
+A faster method could be other AHK technics to bypass or ask admin rights priviledges like start another script separatly with special parameter to:
+```ahk
+;...
+Run *RunAs "%A_ScriptFullPath%"
+;...
+;return
 ```
 
