@@ -133,7 +133,7 @@ This line is not necessary, it help just to avoid to use the tab functionnality 
 ```
 
 This line is just for send tab normally in another way, that permit for exemple in **Sublime text** to get the completion working normally, not a normal <kbd>tab</kbd> with <kbd>shift key</kbd>, to look for first completions matches first of libs,..,classes,..,globals... names.
-`Shift`
+<kbd>Shift</kbd>
 
 This is for positionate the mouse accordingly to your resolution supposed to be 1080, but maybe depend your metro banner configuration, it can become usefull with not much apps opened but unselectable when not enough banner space later. Change if you want.
 ```autohotkey
@@ -444,7 +444,7 @@ Another little anomaly with the old version that used constantly to send <kbd>co
  
 ```ahk
  Run, "C:\Users\Default\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\Window Switcher.lnk".
-```ahk
+```
 
 
 ##W8
