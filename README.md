@@ -491,6 +491,21 @@ You can find after this:
 return
 ```
 
+## About sublime text and multi selection with indentation
+---
+
+The subject of the multi cursor in Sublime text with the previous shortcuts can miss the first line when you want paste the same content of each lines to every new lines and same lines amount, but it can fail for certains reasons, not with win key and v key, the next idea is howto do that by using multi cursor per area at the same time each x lines per tag number in the texts parts.
+```ahk
+;pureclipboard content instead
+<#v::
+    Clip0 = %ClipBoardAll%
+    ClipBoard = %ClipBoard%
+    Send ^v
+    Sleep 50
+    ClipBoard = %Clip0%
+    VarSetCapacity(Clip0, 0)
+return
+```
 
 
 ## not included, open task manager faster
@@ -515,6 +530,15 @@ Send,^+{Esc}
 ;SendInput,{Left}
 ;Sleep,50
 ;Send,{Enter}
+;
+;Send,NumpadOff
+;Send,{Numpad4}
+;Send,NumpadOn
+
+;enter::
+;Send,Click
+;return
+
 return
 ```
 
