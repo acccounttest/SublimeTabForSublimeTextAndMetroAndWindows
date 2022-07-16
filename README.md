@@ -9,7 +9,7 @@ alive and not close immediately too, there must be code lines in it under the he
 least 2 .AHK file started, if you don't know what start, choose something you want bind or rebind or simply cut the
 code of a script into two, but i am not sure it is really good, now see V3 to know all.
 ```
-# Window manager with modifiers or equikeys in corners and SublimeTab for sublimeText , general use and metro alt+tab(double TAB) (For different european keyboards and shortcuts and whole world with shift lock is TAB, keys)
+# Window manager with modifiers or equikeys in corners and **SublimeTab** for **SublimeText** , general use and metro alt+tab(double TAB) (For different european keyboards and shortcuts and whole world with shift lock is TAB, keys)
 
 
 ##IDEA(SEE PAGE BOTTOM FOR W10)
@@ -44,16 +44,15 @@ code of a script into two, but i am not sure it is really good, now see V3 to kn
 
 ##IDEA(SEE PAGE BOTTOM FOR W10)
 --------
-Main idea is replace the tab of the keyboard with shift lock, i prefer and is nearer the others keys but much more used.
+Main idea is replace the <kbd>tab</kbd> of the keyboard with <kbd>shift lock</kbd>, i prefer and is nearer the others keys but much more used.
 
-The second functionnality is about the windows selection, the metro applications banner need to stay on top of all without need to keep press the keys, you can 
-continue to use others keys and no need to press other more, they are just acting as normally.
+The second functionnality is about the windows selection, the metro applications banner need to stay on top of all without need to keep press the keys, you can continue to use others keys and no need to press other more, they are just acting as normally.
 
 Third application do same but not with blacklist/whitelist but groups but temporally only and not top of all others is considered, as well not under all others or all others inverted.
 
-Sublime Text is nice but Tab is nicer.
-Alt+tab by default in Windows 8 is metro, just configure their sizes to see more squares, set thumbnails a little reduced, ideal is dynamic cause the 1080 make sometimes bigger otherwise others lesser(See my Windows theme for know it).
-Always on top is not easy and not usable with all others alt+tab, this script can add the necessary that was no more necessary and add more and more.
+**Sublime Text** is nice but Tab is nicer.
+<kbd>Alt+tab</kbd> by default in Windows 8 is metro, just configure their sizes to see more squares, set thumbnails a little reduced, ideal is dynamic cause the 1080 make sometimes bigger otherwise others lesser(See my Windows theme for know it).
+Always on top is not easy and not usable with all others <kbd>alt+tab</kbd>, this script can add the necessary that was no more necessary and add more functionnalities, old versions were better for old systems.
 
 
 
@@ -83,7 +82,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 CoordMode, Mouse, Screen
 ```
 
-Or headers made by default with the right click new file then autohotkey, not recommanded:
+Or headers made by default with the <kbd>right click</kbd> new file then Autohotkey, not recommanded:
 ```autohotkey
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
@@ -133,7 +132,7 @@ This line is not necessary, it help just to avoid to use the tab functionnality 
 #If
 ```
 
-This line is just for send tab normally in another way, that permit for exemple in sublime text to get the completion working normally, not a normal tab with shift key, to look for first completions matches first of libs,..,classes,..,globals... names.
+This line is just for send tab normally in another way, that permit for exemple in **Sublime text** to get the completion working normally, not a normal <kbd>tab</kbd> with <kbd>shift key</kbd>, to look for first completions matches first of libs,..,classes,..,globals... names.
 `Shift`
 
 This is for positionate the mouse accordingly to your resolution supposed to be 1080, but maybe depend your metro banner configuration, it can become usefull with not much apps opened but unselectable when not enough banner space later. Change if you want.
@@ -141,7 +140,7 @@ This is for positionate the mouse accordingly to your resolution supposed to be 
 MouseMove, 494,454,0
 ```
 
-This means the state can be pressed or not, D or U, for down or up
+This means the state can be pressed or not, <kbd>D</kbd> or <kbd>U</kbd>, for <kbd>down</kbd> or <kbd>up</kbd>
 ```autohotkey
 (state = "D")```
 
@@ -154,21 +153,21 @@ Return
 
 
 
-##In application, this can works differently, while the application propose a configuration and control over keys, this could result into new functionnality or new usages of functionnalities, exemple with Sublime Text.
+##In application, this can works differently, while the application propose a configuration and control over keys, this could result into new functionnality or new usages of functionnalities, exemple with **Sublime Text**.
 
 This permit to counter the sends or receives of keys control in the OS level, as windows does.
 At least override the behavior without lost the old end even gain another functionnality.
-To continue to send the literal tab as spaces or not, without confusion, sublime handle it perfectly like with the original tab key, maybe your configuration is confuse , i suggest you to disable options in main configuration, especially in contradiction with this program and certainly against others same rules in sublime text, elsewhere.
-I use Sublime text version 3200, if you experience problem to send a normal tab key, you could try shift+tab or shift+shift lock.
+To continue to send the literal <kbd>ta</kbd>b as <kbd>spaces</kbd> or not, without confusion, **Sublime** handle it perfectly like with the original <kbd>tab key</kbd>, maybe your configuration is confuse , i suggest you to disable options in main configuration, especially in contradiction with this program and certainly against others same rules in **Sublime text**, elsewhere.
+I use **Sublime text** version 3200, if you experience problem to send a normal <kbd>tab key</kbd>, you could try <kbd>shift+tab</kbd> or <kbd>shift+shift lock</kbd>, this key status could be locked definitively too with AHK, and should still with any other combination of <kbd>modifier(s) key(s)</kbd>, maybe not with the <kbd>numpad lock</kbd> status like when you can press <kbd>Numpad4</kbd> in the same time and it should switch despit a AHK script running include a line to control this status definitively.
 
 
 
 ##Third idea: rebind another same application
 ---
 What i do:
-- Send window under all others windows, release the key ² very fast.
+- Send window under all others windows, release the key <kbd>²</kbd> very fast.
 - Send the window to the front, always on top, press less 0.5 second same key.
-- Supress simply the always on top of the application, the others on top should appears automatically and immediatly, combine alt and ².
+- Supress simply the always on top of the application, the others on top should appears automatically and immediatly, combine <kbd>alt</kbd> and <kbd>²</kbd>.
 - Invert groups, soon.
 - Select windows by thumbnails the fastest possible, double press the original tab key.
 - etc
@@ -178,17 +177,14 @@ What this old app does:
 - This app add temporal groups.
 
 What another project can do too:
-- In ChromeTabMouse, project CTM, use same next window by using shortcut that come from taskbar pinned and positioned app from 1 to 9.
+- In ChromeTabMouse, project CTM, use same next window by using shortcut that come from taskbar pinned and positioned app from <kbd>1</kbd> to <kbd>9</kbd>.
 - And/or you can go back the old application same windows.
 
 [ChromeTabMouse](https://github.com/acccounttest/ChromeTabMouse-Chrome-Tab-Mouse)
 
-Easy Window Switcher , wincycle.exe, Located in \%AppData%\Local\NeoSmart Technologies\wincycle\
+`Easy Window Switcher , wincycle.exe, Located in \%AppData%\Local\NeoSmart Technologies\wincycle\`
 
-This other application can do a similar approach, but i needed rewrite the shortcut to make it works cause the key for my country is not convertible with modifiers as it use already one modifier key, example ``` ctrl+` and ` ``` need 2 modifiers or 1, this last application permit to cycle the same windows of
-the same application, notepad compatible, 0 config, it should change in main european main countries, but maybe you can find it for you,
- for belgium it is ``` ` ``` backtick but it is well triggered by their application, faster than a uncompiled .ahk file, really fast and usefully accessible,
- the ideal is forward it to this: 
+This other application can do a similar approach, but i needed rewrite the shortcut to make it works cause the key for my country is not convertible with modifiers as it use already one modifier key, example <kbd>ctrl+`<kbd> and <kbd>`</kbd> need 2 modifiers or 1, this last application permit to cycle the same windows of the exact same application name, notepad compatible, 0 config, it should change in main European main countries, but maybe you can find it for you, for belgium it is <kbd> ´ <kbd> <kbd>tick</kbd>, but it is well triggered by their application, faster than a uncompiled .ahk file, really fast and usefully accessible, the real utility is you can pla ywith temp windows up to 3 to never lose them, the ideal is forward it to this: 
 
 ```autohotkey
 #²::            
@@ -196,12 +192,11 @@ Send !{ù}
 Return
 ```
 
-German langage use another key too, for french it should be the backtick but for me,
- it was the ù present on the same key of the backtick, but this isn't enough, so i use the famous exponent sign with the Win key.
+German langage use another key too, for french it should be the <kbd>backtick</kbd> but for me, it was the <kbd>ù</kbd> present on the same key of the <kbd>backtick</kbd>, but this isn't enough, so i use the famous <kbd>exponent</kbd> sign with the <kbd>Win key</kbd>.
 
-As it is rarely used, it can be found at top left of your keyboard, this is the key left to 1, under escape, replace it, it's not garanted the key detection will still use same behavior or compatibility.
+As it is rarely used, it can be found at top left of your keyboard, this is the <kbd>left key</kbd> to 1, under <kbd>escape</kbd>, replace it, it's not garanted the key detection will still use the same behavior or compatibility.
 
-A new shortcut is needed to do this, send window flagged top of all others, below all others of the same flag activated but always on top, repeat the D/U value in the script in the other area of the key and detect if control was in the appropriate status when triggered keys occurs.
+A new shortcut is needed to do this, send window flagged top of all others, below all others of the same flag activated but always on top, repeat the <kbd>D</kbd>/<kbd>U</kbd> value in the script in the other area of the key and detect if control was in the appropriate status when triggered keys occurs.
 
 You can too make fake groups, by the way you can use and reuse the shortcut, if you do something in contradiction or others shortcuts, the same, you could lose them.
 
@@ -209,7 +204,7 @@ You can too make fake groups, by the way you can use and reuse the shortcut, if 
 
 ##MY IDEA
 ------------
-In fact, current tool help you to achieve something more interesting, open the window really new always on top, normally you have to do more than one clic, but it does not works for all windows, all the orders now can be achieved in a `click`, earlier in the old fhasion alt-tab behavior, you had to minimum press the control ctrl to be sure the window is on front even after selected it as a white border around the thumbnail, but not under always on top window and maybe under.
+In fact, current tool help you to achieve something more interesting, open the window really new always on top, normally you have to do more than one clic, but it does not works for all windows, all the orders now can be achieved in a <kbd>click</kbd>, earlier in the old fashion <kbd>alt-tab</kbd> behavior, you had to minimum press the <kbd>control</kbd> to be sure the window is on front even after selected it as a white border around the thumbnail, but not under always on top window and maybe under.
 
 AHK use ^ + # ! respectively for control,shift,windows,alt keys
 ~ $ * are other chars for appliance of the detection, maybe you could start from here, untested on others OS.
@@ -217,7 +212,7 @@ Forget about other signs, they are for platform compatibility and at OS level, t
 I give others freekeys and all the others shortcuts available for windows management.
 If you prefer use another key, you can try, combination of all special keys together is yet unecessary and incompatible or simply.
 
-The unforgettable set always off
+The unforgettable set always off.
 
 ```autohotkey
 $!²::
@@ -299,16 +294,16 @@ return
 
 ##FUTURE
 -----------
-Add handle key `²` 2 seconds is another functionnality as others keys can works and are not conflictual or well deactivable.
-The idea is keep remain a list of tab that were previously added in a list of always on top application, in the usual way the list is dynamic, so we could achieve an operation on that list of window, minimize them, remove the on top option to reactive it later on all same windows, but the same with all others windows until there are at least 2 windows in that list, the way to achieve it can look more similar without knowledge, you could do just a list of working application or reuse sometrhing less reliable that will detect any windows, in a loop or with more conditionnals instructions.
+Add handle key <kbd>²</kbd> 2 seconds is another functionnality as others keys can works and are not conflictual or well deactivable.
+The idea is keep remain a list of tab(s) that were previously added in a list of always on top application, in the usual way the list is dynamic, so we could achieve an operation on that list of window, minimize them, remove the on top option to reactive it later on all same windows, but the same with all others windows until there are at least 2 windows in that list, the way to achieve it can look more similar without knowledge, you could do just a list of working application or reuse sometrhing less reliable that will detect any windows, in a loop or with more conditionnals instructions.
 
 
 
 ##THUMBNAILS CONFIGURATION
 ------------------------
-After the use of the escape key after a `double tab`, the double same key is broken, change the window or type something, it works only when the script does it when we want to close the banner with the `right click` by sending a emulated escape key.
-Change the size of metro thumbnails, see my Windows theme project, about metro thumbnails in `alt+tab`.
-Important, for the MouseMove, change your thumbnails configuration with WinAeroTweaker, alt+tab section:
+After the use of the escape key after a <kbd>double tab</kbd>, the double same key is broken, change the window or type something, it works only when the script does it when we want to close the banner with the <kbd>right click</kbd> by sending a emulated escape key.
+Change the size of metro thumbnails, see my Windows theme project, about metro thumbnails in <kbd>alt+tab</kbd>.
+Important, for the MouseMove, change your thumbnails configuration with WinAeroTweaker, <kbd>alt+tab</kbd> section:
 - Thumbnails size 300
 - Horizontal spacing 10
 - Vertical spacing 10
@@ -318,35 +313,38 @@ Important, for the MouseMove, change your thumbnails configuration with WinAeroT
 
 
 Personally i prefer use the number 1, no need to choose between them without knowledge of the title, a list is more appropriate, idk if the setting is reloadable on the fly and apply without need to reconnect the user, i don't have multi resolutions, i don't doubt AHK could control the banner of Metro, it could even split the squares if they start to go outside the screen, for me it was yet the case with not much windows but hopefully it's not too much disturbing, just the configuration allow me to have mouse positioned between the most 4 last used application, i have to move a pixel or two to choose the application.
-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband\NumThumbnails 1 to 16 for 1080 HD
+ 
+`HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband\NumThumbnails`
+ 
+1 to 16 for 1080 HD
 
-The diode of the caps lock has been made to not stay in unfair status with unfair operation number, normally it should show the light but reverse its status, so when always on it stay always on, same for off, my preference, should works really better with caps lock diode off, if it come back on, then try `ctrl+shift lock` or `alt+shift lock`, 2 times should be enough in the worst cases.
+The diode of the caps lock has been made to not stay in unfair status with unfair operation number, normally it should show the light but reverse its status, so when always on it stay always on, same for off, my preference, should works really better with caps lock diode off, if it come back on, then try ctrl+shift lock</kbd> or <kbd>alt+shift lock</kbd>, 2 times should be enough in the worst cases.
 
-If a problem occurs with the double tab then deactivate it, the normal `alt+tab` can works but as usual and original way, if you want same behaviour, add the section about waiting the `left mouse click` then reuse the steps, just after MouseMove, between lines, KeyWait AND AlwaysOnTop, ON, or, between lines, count:=0 AND #If, respectively for version 1 and version 2; or continue to send the virtualized keys, by default, ² half a second, for set last selected window into always on top mode.
+If a problem occurs with the double tab then deactivate it, the normal <kbd>alt+tab</kbd> can works but as usual and original way, if you want same behaviour, add the section about waiting the <kbd>left mouse click</kbd> then reuse the steps, just after MouseMove, between lines, KeyWait AND AlwaysOnTop, ON, or, between lines, count:=0 AND #If, respectively for version 1 and version 2; or continue to send the virtualized keys, by default, <kbd>²</kbd> half a second, for set last selected window into always on top mode.
 
-If you want send a combined keys including `tab` then use the original key tab, ex: `ctrl+tab` or `alt+tab`, note: notepad can bring back to the front just by using `ctrl+alt` keys `down` or not when the window in under the user focus but below a stack of windows, it's normal, this program is exceptional with AHK, don't use it for AHK developments and tests.
+If you want send a combined keys including <kbd>tab</kbd> then use the original key tab, ex: <kbd>ctrl+tab</kbd> or <kbd>alt+tab</kbd>, note: notepad can bring back to the front just by using <kbd>ctrl+alt</kbd> keys <kbd>down</kbd> or not when the window in under the user focus but below a stack of windows, it's normal, this program is exceptional with AHK, don't use it for AHK developments and tests.
 
-This version add possibility to cancel the permanent `alt+tab` by sending escape when the user make a `right click` on it, don't use escape, usually when user send escape it break the same double tab and it need much time and operations to return to the normal detection, otherwise you can simply `click` outside the metro banner but with the `right click`.
+This version add possibility to cancel the permanent <kbd>alt+tab</kbd> by sending escape when the user make a <kbd>right click</kbd> on it, don't use <kbd>escape</kbd>, usually when user send <kbd>escape</kbd> it break the same double tab and it need much time and operations to return to the normal detection, otherwise you can simply <kbd>click</kbd> outside the metro banner but with the <kbd>right click</kbd>.
 
 
 
 (Mandatory)
- # Next potential enhancements, two compatibility fix for sticky/toggle/filter/modifiers... keys, here only alt-tab ctrl+esc and alt+esc
+ # Next potential enhancements, two compatibility fix for sticky/toggle/filter/modifiers... keys, here only <kbd>alt-tab</kbd> <kbd>ctrl+esc</kbd> and <kbd>alt+esc</kbd>
 ---
 ____
 
-This explains why shortcuts and games essentially are not well done, compatible, or crash applications and computers,especially using alt+tab and fullscreen, principaly.
+This explains why shortcuts and games essentially are not well done, compatible, or crash applications and computers, especially using <kbd>alt+tab</kbd> and fullscreen, principaly.
 ___
 
-    https://docs.microsoft.com/en-us/windows/deployment/planning/compatibility-fixes-for-windows-8-windows-7-and-windows-vista
+`https://docs.microsoft.com/en-us/windows/deployment/planning/compatibility-fixes-for-windows-8-windows-7-and-windows-vista`
 
 This is a long API value from simplest parameters of a call or a configuration in the main registry hive at the location given in the link.
 2 of them can be particularly concerned by this project or others I post on Github.
 Note the sandbox of chrome can already be deactivated but it will lose advert or other functionalities, by deactivating it there are many advantages and disadvantages:
-+Gain latency by loading.
--Lose security and get infected by malwares easier or certainly.
--Lose functionalities intended from the website not from adverts or based on.
--Get less compatibility in future, caused by security or evolutivity.
+ + Gain latency by loading.
+ - Lose security and get infected by malwares easier or certainly.
+ - Lose functionalities intended from the website not from adverts or based on.
+ - Get less compatibility in future, caused by security or evolutivity.
 +Memory enhances the time it becomes compatible in newers OS.
 
 2 values referenced:
@@ -371,54 +369,55 @@ Windows 8.
 Maybe older.
 
 Next you could try to understand more about the sandbox and his specialized flags, tokens are in the end.
-https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/design/chrome%3A//tracing
+`https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/design/chrome%3A//tracing`
 Apparently the page is no more accessible, maybe the end of the URL is not well done.
 
-https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-7/cc722093(v=ws.10)
-
+`https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-7/cc722093(v=ws.10)`
 
 The shift key is incuded in sticky keys, by pressing down 5 times or otherwise, following the system and its version and configuration.
 More about this and the utility of the deactivation permanent or temporaly of the filter keys.
-https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/keyboardfilter
+ 
+`https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/keyboardfilter`
 
+ 
 ##MORE MODIFIER KEYS AND REASONABLE LIMITATIONS
 ---
 
 Problem when the shiftlock is blocked without numpad diod on, either:
 -You need send:
- - `alt`+`shiftlock` 
- - `ctrl`+`shiftlock`
- - `ctrl`+`alt`+`shiftlock` 
-While this time i did'nt added `ctrl`+`shiftlock`=`ctrl`+`tab` as it's possible to use it already, and more the ctrl+shiftlock could not works as excepted, and the only way to change the `CAPSLOCK` status is send one of the two key combination, by pairs, no others, but i guess i could try it too and why not use a combination to pause the current script, this is doable by using the AHK routine sendmessage, see doc version 1.1, the most reliable version, the L version.
+ - <kbd>alt+shiftlock</kbd>
+ - <kbd>ctrl+shiftlock</kbd>
+ - <kbd>ctrl+alt+shiftlock</kbd>
+While this time i did'nt added <kbd>ctrl+shiftlock</kbd> = <kbd>ctrl+tab</kbd> as it's possible to use it already, and more the <kbd>ctrl+shiftlock</kbd> could not works as excepted, and the only way to change the <kbd>CAPSLOCK</kbd> status is send one of the two key combination, by pairs, no others, but i guess i could try it too and why not use a combination to pause the current script, this is doable by using the AHK routine sendmessage, see doc version 1.1, the most reliable version, the L version.
 
 ##V5 AND KEYS
 ---
-The version 5 stopped send continually all the `control` keys and determines application behavior with `modifiers`, the version 4 was perfect to find this even with a timer of 500 to let it less intrusive especially in editors like sublime text, but more, that version added competitive shortcuts to execute permanently, not only the shortcut made that include the `control` key in it was affected but those with another key in combination with `backslash`, just like they could be started with that same second key, the `backslash` on my keyboard as first key of two in a combination, without need to keep it pressed all along, without really send it as application or other OS levels can recognize.
+The version 5 stopped send continually all the <kbd>control</kbd> keys and determines application behavior with <kbd>modifiers</kbd>, the version 4 was perfect to find this even with a timer of 500 to let it less intrusive especially in editors like **Sublime text**, but more, that version added competitive shortcuts to execute permanently, not only the shortcut made that include the <kbd>control</kbd> key in it was affected but those with another key in combination with <kbd>backslash</kbd>, just like they could be started with that same second key, the <kbd>backslash</kbd> on my keyboard as first key of two in a combination, without need to keep it pressed all along, without really send it as application or other OS levels can recognize.
 
 This affected the usage of notepad, editors and other applications without significant advantage except to not have to use shortcuts entirely and continually without systematically terminate it or cancell it.
 
 
-The need to reuse the key you use for `exponent` is easily replaced with the key following tab key, but with this key it's not possible to send it, I tried literally by escaping, or enclosing it, it is triggered by AHK.
+The need to reuse the key you use for <kbd>exponent</kbd> is easily replaced with the key following tab key, but with this key it's not possible to send it, I tried literally by escaping, or enclosing it, it is triggered by AHK.
 
 
-The different way to execute another key following the `tab` key is made differently, this script is just protected against itself.
-This can be made like Tab & the key, this could be made to be functional for the whole line of digits, tab as a modifier.
+The different way to execute another key following the <kbd>tab</kbd> key is made differently, this script is just protected against itself.
+This can be made like Tab & the key, this could be made to be functional for the whole line of digits, tab as a modifier, you can experiment it in the project CTM differently.
 
 
 
 Keys :
- - Shift Lock sends a Tab.
- - Alt-tab works normally(suppressed).
+ - <kbd>Shift Lock</kbd> sends a <kbd>Tab</kbd>.
+ - <kbd>Alt-tab</kbd> works normally(suppressed).
  - 
- - Double Tab, maintain alt-tab opened(Now it's a single tap).
+ - <kbd>Double Tab</kbd>, maintain <kbd>alt-tab</kbd> opened(Now it's a single tap).
  - 
- - Control key can be used after alt-tab and windows will always be on top(no more since one line code, but whole code about $tab needed to be in double in two separated AHK scripts).
+ - <kbd>Control key</kbd> can be used after <kbd>alt-tab</kbd> and windows will always be on top(no more since one line code, but whole code about $tab needed to be in double in two separated AHK scripts).
  - 
- - Right click after alt-tab cancel the GUI, no more since one line is enough all platforms.
+ - <kbd>Right click</kbd> after <kbd>alt-tab</kbd> cancel the GUI, no more since one line is enough all platforms.
  - 
- - Left click select the window.
+ - <kbd>Left click</kbd> select the window.
  - 
- - Alt + Right click still necessary since one line code was implemented for all solutions, usually not specially, example with CTM that can get system clipboard frozen, so you must quit the current browser concerned, using SublimeTab with a single Tab does not solve the banner that continue to be shown, even a simple right click does not change the white highlight around windows during this shortcut and the other with the modifer too. 
+ - <kbd>Alt + Right click</kbd> still necessary since one line code was implemented for all solutions, usually not specially, example with CTM that can get system clipboard frozen, so you must quit the current browser concerned, using **SublimeTab** with a single Tab does not solve the banner that continue to be shown, even a simple right click does not change the white highlight around windows during this shortcut and the other with the modifier too. 
 
 
 - The three exponents values in time :
@@ -429,28 +428,31 @@ Keys :
  - 
 - Two seconds(not defined)
  - 
-- Tab+right clic=Send escape(Removed).
+- <kbd>Tab+right</kbd> click=Send <kbd>escape</kbd>(Removed).
  - 
 
 
 If you get troubles using a AHK script with specials characters, try to use theses tips:
--Reopen the file with encoding utf-8 with BOM(not only utf-8)
--Escape the character with a tick, i can't represent as usual in markdown because the paired ticks are used and triple too.
--Use at least 2 AHK script started in same time, this can help with short scripts.
+ - Reopen the file with encoding utf-8 with BOM(not only utf-8)
+ - Escape the character with a <kbd>tick</kbd>, i can't represent as usual in markdown because the paired ticks are used and triple too.
+ - Use at least 2 AHK script started in same time, this can help with short scripts.
 ```
 `
 ```
 
-Another little anomaly with the old version that used constantly to send `control` keys, without this when `shiftlock` is locked, it has been needed to press `control` with `alt` and `shiftlock`, it restablish the always `capital` on to off, normaly in future, i will check if it is necessary to check if `shiftlock` status can break the show(and btw the choose) of the application switcher, this could replace my current code, this is the path to the symbolic link as lnk, with this Run, "C:\Users\Default\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\Window Switcher.lnk".
-
+Another little anomaly with the old version that used constantly to send <kbd>control</kbd> keys, without this when <kbd>shiftlock</kbd> is locked, it has been needed to press <kbd>control</kbd> with <kbd>alt</kbd> and <kbd>shiftlock</kbd>, it restablish the always <kbd>capital</kbd> on to off, normaly in future, i will check if it is necessary to check if <kbd>shiftlock</kbd> status can break the show(and BTW the choose) of the application switcher, this could replace my current code, this is the path to the symbolic link as ".lnk", with this : 
+ 
+```ahk
+ Run, "C:\Users\Default\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\Window Switcher.lnk".
+```ahk
 
 
 ##W8
 ---
 
 Warning script can be broken, under Windows 8 and probably w10(but script part is commented out), if the code part of the windows taskbar double shortcut(one after one for sure bar is reduced) and only this code part, if at start(after headers) or at end, it break differently:
- - At start, it can works if it was previously written the last lines in the script, but it will stop the others main functionnalitites, can't reload.
- - At the end it will stop after a moment, like upper, maybe longer, but others functionnalitites can continue, if this stop, you probably need create  another script with that code alone separated, probably where more matching code part can reside to be interpretted in the same way or sens or reading.
+ - At start, it can works if it was previously written the last lines in the script, but it will stop the others main functionalities, can't reload.
+ - At the end it will stop after a moment, like upper, maybe longer, but others functionnalitites can continue, if this stop, you probably need create another script with that code alone separated, probably where more matching code part can reside to be interpretted in the same way or sens or reading.
 
 Latest version and lost functionnalities due to code only a single line to make the banner of the "apps" thumbnails :
 ---
@@ -474,8 +476,8 @@ Latest version and lost functionnalities due to code only a single line to make 
 ## Notes about paste with/wo indentation, now universal with vv
 ---
 <strike>
-- Could not works in explorer windows and others applications, to not break others apps too i didn't added another original paste function more generic as it should be almost 100% compatible with the system, here is only for Python and Sublime text, it works well in python because it paste to the current line without have to firstly add *tab(s)* or correct indentation later, while it can too paste multiple lines without deform anything, ommit or add indentation proportionnaly to original line bloc, something that should works certainly with clipboard application or sublime text extensions differently or similarly.
-- I can suggest you to use a rare modifier with an original letter, something like Window key or **Fn** with **v**.
+- Could not works in explorer windows and others applications, to not break others apps too i didn't added another original paste function more generic as it should be almost 100% compatible with the system, here is only for Python and **Sublime text**, it works well in python because it paste to the current line without have to firstly add <kbd>tab(s)</kbd> or correct indentation later, while it can too paste multiple lines without deform anything, ommit or add indentation proportionnaly to original line bloc, something that should works certainly with clipboard application or sublime text extensions differently or similarly.
+- I can suggest you to use a rare modifier with an original letter, something like Window key or <kbd>Fn</kbd> with <kbd>v</kbd>.
 - It's mostly all windows UI parts that are concerned, the risk it produce something else or something new is very low, the only thing that could happend is nothing that has been expected.
 </strike>
 I have not found how to get a clue against every type of paste in all applications, i prefered not override default <kbd>control-v</kbd>, but more reuse only double <kbd>v</kbd> in **sublime** for my formatting.
@@ -494,7 +496,7 @@ return
 ## About sublime text and multi selection with indentation
 ---
 
-The subject of the multi cursor in Sublime text with the previous shortcuts can miss the first line when you want paste the same content of each lines to every new lines and same lines amount, but it can fail for certains reasons, not with win key and v key, the next idea is howto do that by using multi cursor per area at the same time each x lines per tag number in the texts parts.
+The subject of the multi cursor in **Sublime text** with the previous shortcuts can miss the first line when you want paste the same content of each lines to every new lines and same lines amount, but it can fail for certains reasons, not with <kbd>win key</kbd> and <kbd>v key</kbd>, the next idea is "howto" do that by using multi cursors per area at the same time each x lines per tag number in the texts parts.
 ```ahk
 ;pureclipboard content instead
 <#v::
