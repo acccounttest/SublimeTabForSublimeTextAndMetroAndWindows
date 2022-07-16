@@ -184,7 +184,7 @@ What another project can do too:
 
 `Easy Window Switcher , wincycle.exe, Located in \%AppData%\Local\NeoSmart Technologies\wincycle\`
 
-This other application can do a similar approach, but i needed rewrite the shortcut to make it works cause the key for my country is not convertible with modifiers as it use already one modifier key, example <kbd>ctrl+`<kbd> and <kbd>`</kbd> need 2 modifiers or 1, this last application permit to cycle the same windows of the exact same application name, notepad compatible, 0 config, it should change in main European main countries, but maybe you can find it for you, for belgium it is <kbd> ´ <kbd> <kbd>tick</kbd>, but it is well triggered by their application, faster than a uncompiled .ahk file, really fast and usefully accessible, the real utility is you can pla ywith temp windows up to 3 to never lose them, the ideal is forward it to this: 
+This other application can do a similar approach, but i needed rewrite the shortcut to make it works cause the key for my country is not convertible with modifiers as it use already one modifier key, example <kbd>ctrl+`<kbd> and <kbd>`</kbd> need 2 modifiers or 1, this last application permit to cycle the same windows of the exact same application name, notepad compatible, 0 config, it should change in main European main countries, but maybe you can find it for you, for Belgium it is <kbd> ´ </kbd> <kbd>tick</kbd>, but it is well triggered by their application, faster than a uncompiled .ahk file, really fast and usefully accessible, the real utility is you can pla ywith temp windows up to 3 to never lose them, the ideal is forward it to this: 
 
 ```autohotkey
 #²::            
