@@ -9,7 +9,7 @@ alive and not close immediately too, there must be code lines in it under the he
 least 2 .AHK file started, if you don't know what start, choose something you want bind or rebind or simply cut the
 code of a script into two, but i am not sure it is really good, now see V3 to know all.
 ```
-# Window manager with modifiers or equikeys in corners and **SublimeTab** for **SublimeText** , general use and metro alt+tab(double TAB) (For different european keyboards and shortcuts and whole world with shift lock is TAB, keys)
+# Window manager with modifiers or equikeys in corners and **SublimeTab** for *SublimeText* , general use and metro alt+tab(double TAB) (For different european keyboards and shortcuts and whole world with shift lock is TAB, keys)
 
 
 ##IDEA(SEE PAGE BOTTOM FOR W10)
@@ -552,3 +552,45 @@ Run *RunAs "%A_ScriptFullPath%"
 ;return
 ```
 
+
+ # Specials keys and esperluet operator key
+---
+
+If you want disable certain <kbd> modifier(s) </kbd> and <kbd> capslock(or <kbd> tab </kbd>)</kbd> keys combination, see :
+
+https://www.autohotkey.com/docs/KeyList.htm#SpecialKeys
+
+This always has been not studied, the modifiers are sensible and it's better let them act as normally without override their eventual new default behavior, if you want enable or disable or avoid certain combinations of them, use **CTM**, this project in the same repository can help you to figure out, if your keys are working well, if you can use them always and plainly, and finally if the keys are replaceable or moved or duplicated and keep certain of their functionalities.
+
+
+In contradiction with **sublimetab**, better instead use <kbd> capslock </kbd> and <kbd> tab </kbd> key but it's harder than <kbd> esc </kbd> but safer :
+```
+~$CapsLock::
+msgbox,"CAPSLOCK"
+return
+```
+
+
+```
+Capslock & X::Run, http://www.google.com/search?q=%clipboard%
+;...
+```
+You could want use theses types of combo, it is not possible with the ```specials chars``` of the keyboard line and these disadvantages :
+ - It's not possible to differentiate with only this code if it's consecutive or not.
+ - The <kbd> special chars keys </kbd> are not working, are missing or not representative in the expression.
+ - The <kbd> timings </kbd> cannot be used, the actions are directly consecutive to all the actions of the triggers
+ - You should require to erase the next letter completely everywhere, this is not done, maybe headers and directives can help you but it's not enough, <kbd> keys </kbd> could be remaining or doing an erasure operation like in *SublimeText*.
+ - Its much more common to use this <kbd> key </kbd> and same other keys, one after one, in different activities like code writing.
+ - Other application can rewrite theses keys and are candidate to not execute the actions if you not use *AHK* itself or something else low level. 
+
+
+An example for <kbd> qwerty </kbd> user only probably, should involve minor modifications to works in <kbd> azerty </kbd> and others as the two <kbd> chevrons </kbd> are in the same key and one with the <kbd> shift </kbd> modifier, considering all the keyboards the most common key at the same key position in the keyboards, not of <kbd> qwerty </kbd>, include the <kbd> backslash </kbd> character.
+
+```
+AppsKey::ToolTip Press < or > to cycle through tabs.
+AppsKey Up::ToolTip
+~AppsKey & <::Send ^+{tab}
+~AppsKey & >::Send ^{tab}
+```
+
+This key is already included in **CTM** then the best alternative is use the keys in the same time, but with minor modifications or script overriding the program triggers, it should be possible to temporally use more shortcut combinations including this special key not written like in **CTM**.
