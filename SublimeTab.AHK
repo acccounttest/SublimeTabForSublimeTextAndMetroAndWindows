@@ -265,7 +265,7 @@ indexme(alist,aval)
 #If WinActive("ahk_exe sublime_text.exe")
 
 
-global lockme:=0
+global lockme:=1
 
 
 
