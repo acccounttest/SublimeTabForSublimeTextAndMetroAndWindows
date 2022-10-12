@@ -627,3 +627,98 @@ This key is already included in **CTM** then the best alternative is use the key
 
 global azertyOrQwerty
 See this variable further set to true or false, for respectively azerty or qwerty.
+
+
+OR USE:
+
+```ahk
+indexme(alist,aval)
+{
+    ;Msgbox,% alist.Length() "--" aval
+    
+    Loop,% alist.Length()
+    {
+        if (alist[A_Index]=aval)
+        {
+            ;,"THE SAME !"
+            Return A_Index
+        }
+    }
+    Return 0
+}
+
+
+#If WinActive("ahk_exe sublime_text.exe")
+Tab & @::
+Tab & #::
+Tab & $::
+Tab & %::
+Tab & ^::
+Tab & *::
+Tab & )::
+Tab & &::
+Tab & é::
+Tab & "::
+Tab & '::
+Tab & (::
+Tab & §::
+Tab & è::
+Tab & !::
+Tab & ç::
+Tab & à::
+
+azertyOrQwerty:=true
+startchars2:=["!","@","#","$","%","^","&","*","(",")"]
+startchars2bis:=["&","é","""","'","(","§","è","!","ç","à"]
+
+sleep,150
+uniqchar:=LTrim(A_ThisHotkey,"Tab")
+if (uniqchar=" & &")
+{
+    uniqchar:=StrReplace(uniqchar," & ","")
+}
+else
+{
+    uniqchar:=LTrim(uniqchar," & ")
+}
+
+aastate0:=GetKeyState(uniqchar,"P")
+if (aastate0=1)
+{
+    reverseorder:=1
+    ;lockme:=1
+}
+else
+{
+    reverseorder:=0
+}
+
+if (azertyOrQwerty=true)
+{
+    superind:=indexme(startchars2bis,uniqchar)
+}
+else
+{
+    superind:=indexme(startchars2,uniqchar)
+}
+
+Loop,% superind
+{
+    if (reverseorder=1)
+    {
+        Send, {Up}
+    }
+    else
+    {
+        Send, {Down}
+    }
+    
+    Sleep,35
+}
+Sleep,50
+Send,{Tab}
+
+return
+
+#If
+```
