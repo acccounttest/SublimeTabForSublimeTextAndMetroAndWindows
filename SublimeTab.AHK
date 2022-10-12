@@ -172,51 +172,246 @@ else
 }
 return 
 
-+WheelUp::
-oki:=WinActive("ahk_exe sublime_text.exe")
-if (oki)
-{
-    ActiveHwnd := WinExist("A")
 
-    SendInput,+{WheelUp}
+;ALL COMMENTS BELOW CAUSE ONLY OF CHROMETABMOUSE GET ITS OWN FUNCTIONNALITIES.
+
+#If WinActive("ahk_exe sublime_text.exe")
++WheelUp::
+;oki:=WinActive("ahk_exe sublime_text.exe")
+;if (oki)
+;{
+    ;ActiveHwnd := WinExist("A")
+    SendInput,+{WheelDown}
     ;Sleep,50
-    if (oki=ActiveHwnd)
-    {
-    SendInput,+{WheelUp}
+    ;if (oki=ActiveHwnd)
+    ;{
+    SendInput,+{WheelDown}
     ;Sleep,50
-    SendInput,+{WheelUp}
+    SendInput,+{WheelDown}
     ;Sleep,50
-    SendInput,+{WheelUp}
-    }
-}
-else
-{
-SendInput,+{WheelUp} 
-}
+    SendInput,+{WheelDown}
+    ;}
+;}
+;else
+;{
+;SendInput,+{WheelDown} 
+;}
 return
 
 
 +WheelDown::
-oki:=WinActive("ahk_exe sublime_text.exe")
-if (oki)
+;oki:=WinActive("ahk_exe sublime_text.exe")
+;if (oki)
+;{
+    ;ActiveHwnd := WinExist("A")
+    SendInput,+{WheelUp}
+    ;if (oki=ActiveHwnd)
+    ;{
+    ;Sleep,50
+    SendInput,+{WheelUp}
+    ;Sleep,50
+    SendInput,+{WheelUp}
+    ;Sleep,50
+    SendInput,+{WheelUp}
+    ;}
+;}
+;else
+;{
+;SendInput,+{WheelUp}
+;}
+return
+
+#If
+
+
+;This functionnality help to choose a completion popup entry with a single key, instead several up or down followed by an enter.
+;The first key can help to switch this on or off, the popup has been commented cause if close the sublimetext popup, next there will no need of activate or deactivate
+;the special chars line, instead manually change the status on or off, it could be simpler to detect if that popup exists or not by using an exact pixel detection.
+;the shift, control, alt and altgr can be used as normally.
+;Simly configure the script as azerty or qwerty cause some chars are identicals.
+
+;CONFIGURATION:
+;azertyOrQwerty:=true
+;USAGE:
+;Double press the first special char key to change status on or off, the default is to off.
+;Double press the first key and keep it down after 150 ms is enough to send it normally while status in on.
+;Single press a special char send the equivalent number of keys according to its position on that keyboard line.
+;Keep after 150ms will send up, not down, because sometimes the popupcompletion show the current selected entry 
+;to the middle of the menu or as the last entry, not the first, nothing can predict this with certainty.
+;NOTE: the next entry is not supported, it require the pixel detection to be sure the first key can be accessible.
+
+global azertyOrQwerty
+
+
+global startchars2
+global startchars2bis
+
+indexme(alist,aval)
 {
-    ActiveHwnd := WinExist("A")
-    SendInput,+{WheelDown}
-    if (oki=ActiveHwnd)
+    ;Msgbox,% alist.Length() "--" aval
+    
+    Loop,% alist.Length()
     {
-    ;Sleep,50
-    SendInput,+{WheelDown}
-    ;Sleep,50
-    SendInput,+{WheelDown}
-    ;Sleep,50
-    SendInput,+{WheelDown}
+        if (alist[A_Index]=aval)
+        {
+            ;,"THE SAME !"
+            Return A_Index
+        }
     }
+    Return 0
+}
+
+
+#If WinActive("ahk_exe sublime_text.exe")
+
+
+global lockme:=0
+
+
+
+;>!@::
+;>!#::
+;>!$::
+;>!%::
+;>!^::
+;>!*::
+;>!)::
+;>!&::
+;>!é::
+;>!"::
+;>!'::
+;>!(::
+;>!§::
+;>!è::
+;>!!::
+;>!ç::
+;>!à::
+$@::
+$#::
+$$::
+$%::
+$^::
+$*::
+$)::
+$&::
+$é::
+$"::
+$'::
+$(::
+$§::
+$è::
+$!::
+$ç::
+$à::
+;Msgbox,% A_ThisHotkey
+uniqchar:=LTrim(A_ThisHotkey,"~")
+uniqchar:=LTrim(uniqchar,"$")
+;Msgbox,% uniqchar
+if (uniqchar="&")
+{
+    ;Msgbox,% uniqchar
+    if ((A_TimeSincePriorHotkey < 300) and (A_TimeSincePriorHotkey > 50))
+    {
+        ;Send,{%uniqchar%}
+        ;Msgbox,% "dddd"
+
+        sleep,150
+        aastate0:=GetKeyState("&","P")
+        if (aastate0=1)
+        {
+            Send,{&}
+            Return
+        }
+
+        if (lockme=1)
+        {
+            lockme:=0
+        }
+        else
+        {
+            lockme:=1
+        }
+        ;Msgbox,4096,SPECHARLOCK,Special chars lock is %lockme%,0.5
+        ;NO STATUS CAUSE IT CLOSE COMPLETION POPUP
+        Return
+    }
+    Return
+}
+sleep,150
+aastate0:=GetKeyState(uniqchar,"P")
+if (aastate0=1)
+{
+    reverseorder:=1
+    ;lockme:=1
 }
 else
 {
-SendInput,+{WheelDown}
+    reverseorder:=0
 }
+
+    
+
+azertyOrQwerty:=true
+
+
+startchars2:=["!","@","#","$","%","^","&","*","(",")"]
+startchars2Exceptions:=["$"]
+startchars2bis:=["&","é","""","'","(","§","è","!","ç","à"]
+startchars2bisExceptions:=["&","é","""","'","(","§","è","!","ç","à"]
+
+
+
+aastate1:=GetKeyState("RAlt","P")
+aastate2:=GetKeyState("Control","P")
+aastate3:=GetKeyState("Alt","P")
+aastate4:=GetKeyState("Shift","P")
+if ((lockme=1) OR (aastate1=1) OR ((aastate2=1) AND (aastate3=1)) OR (aastate4=1))
+{
+    ;Msgbox,"OPA"
+    Send, {%uniqchar%}
+}
+else
+{
+    ;Msgbox,% azertyOrQwerty
+    if (azertyOrQwerty=true)
+    {
+        ;Msgbox,% "OOOO" uniqchar
+        superind:=indexme(startchars2bis,uniqchar)
+        ;Msgbox,% superind
+        superind2:=indexme(startchars2,uniqchar)
+    }
+    else
+    {
+        superind:=indexme(startchars2,uniqchar)
+        superind2:=indexme(startchars2bis,uniqchar)
+    }
+    ;Msgbox,% superind
+    ;
+    if (superind=0)
+    {
+        Send, {%uniqchar%}
+        Return
+    }
+    Loop,% superind
+    {
+        if (reverseorder=1)
+        {
+            Send, {Up}
+        }
+        else
+        {
+            Send, {Down}
+        }
+        
+        Sleep,35
+    }
+    Sleep,100
+    Send,{Tab}
+}
+
+
 return
+#If
 
 
 ;This lines below are additionnals, it can help when using a window and its full height can't extend at max, so let switch the taskbar and on top flags.
