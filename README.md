@@ -594,3 +594,26 @@ AppsKey Up::ToolTip
 ```
 
 This key is already included in **CTM** then the best alternative is use the keys in the same time, but with minor modifications or script overriding the program triggers, it should be possible to temporally use more shortcut combinations including this special key not written like in **CTM**.
+
+
+## Completion entry with special chars keys
+-------------------------------------------
+
+;This functionnality help to choose a completion popup entry with a single key, instead several up or down followed by an enter.
+;The first key can help to switch this on or off, the popup has been commented cause if close the sublimetext popup, next there will no need of activate or deactivate
+;the special chars line, instead manually change the status on or off, it could be simpler to detect if that popup exists or not by using an exact pixel detection.
+;the shift, control, alt and altgr can be used as normally.
+;Simly configure the script as azerty or qwerty cause some chars are identicals.
+
+;CONFIGURATION:
+;azertyOrQwerty:=true
+;USAGE:
+;Double press the first special char key to change status on or off, the default is to off.
+;Double press the first key and keep it down after 150 ms is enough to send it normally while status in on.
+;Single press a special char send the equivalent number of keys according to its position on that keyboard line.
+;Keep after 150ms will send up, not down, because sometimes the popupcompletion show the current selected entry 
+;to the middle of the menu or as the last entry, not the first, nothing can predict this with certainty.
+;NOTE: the next entry is not supported, it require the pixel detection to be sure the first key can be accessible.
+
+global azertyOrQwerty
+See this variable further set to true or false, for respectively azerty or qwerty.
